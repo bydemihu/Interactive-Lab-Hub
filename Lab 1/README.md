@@ -95,7 +95,7 @@ the interaction*:
 
 **Describe your masterwork here, in your own words. What is the core interaction
 someone would recognize it by?**
-The Ambient Orb is an object that functions as both a decor piece and data visualization for important information that can be read at a glance. The core interaction someone would recognize it by is a person, upon seeing the color of the orb, distilling information from it and performing some action as a result. 
+The Ambient Orb is an object that functions as both a decor piece and data visualization for important information that can be read at a glance. It can be configured by the user to display certain data they wish to have easily accessible, for example, a positivity/negativity indicator for daily stock market trends. It is designed to display real-time data non-intrusively, treating data visualization as an ambient indicator to be noticed rather than analyzed. The core interaction someone would recognize it by is a user, upon seeing the color of the orb, distilling information from it and performing some action as a result. 
 
 ## Part A. Plan
 
