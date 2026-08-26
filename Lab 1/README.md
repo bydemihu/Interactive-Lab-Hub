@@ -84,8 +84,12 @@ drew. Do real research. You are looking less for trivia than for the *shape of
 the interaction*:
 
 - What inputs are available to the user? What responses does the work give?
+-    Primarily sight. The user can also configure what data is displayed and how. The work gives a response through color change in reaction to data. 
 - Who is present, and how does the piece color the relationships between them?
+-    The user/owner of the orb is present. The piece contributes at-a-glance information to the user, and affects the user's subsequent external actions they take. Eg. rushing to sell stock if the market goes down. 
 - What is the piece famous for? What are its strengths and its weaknesses?
+-    It's famous for being recognized by the NYT as one of the "Ideas of the Year" in 2002. Another ambient device, Chumby, was commercially produced and proclaimed one of the top gadgets of 2008.
+-    One weakness stems from the ambiguity of the data: only the user who sets the data understands what the color means. However, this could also be a strength, as the piece functions as beautiful ambient decor without being overtly a piece of data visualization.  
 
   Sometimes the details of how the interaction worked are lost in history. Try filling it in with your imagination!
 
