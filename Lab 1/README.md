@@ -2,7 +2,7 @@
 
 _This project is to be done in teams of 2._
 
-**NAME OF BOTH COLLABORATOR(S) HERE**
+**Demi Hu**
 
 **THE MASTERWORK YOU DREW FROM THE HAT:**
 
@@ -95,6 +95,7 @@ the interaction*:
 
 **Describe your masterwork here, in your own words. What is the core interaction
 someone would recognize it by?**
+The Ambient Orb is an object that functions as both a decor piece and data visualization for important information that can be read at a glance. The core interaction someone would recognize it by is a person, upon seeing the color of the orb, distilling information from it and performing some action as a result. 
 
 ## Part A. Plan
 
