@@ -2,7 +2,7 @@
 
 _This project is to be done in teams of 2._
 
-**Demi Hu**
+**Demi Hu, Alex Yen**
 
 **THE MASTERWORK YOU DREW FROM THE HAT:**
 
