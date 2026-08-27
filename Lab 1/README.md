@@ -103,11 +103,14 @@ For your masterwork, reconstruct the interaction as a scene:
 
 - **Setting:** Where and when does this interaction happen? (a jungle, a kitchen,
   a spaceship corridor, a nightclub, a harbor at night)
-  - 
+  - An office building for a finance/trading company. Daytime.
 - **Players:** Who is involved? Who else is present? Think through everyone in
   the setting, not just the primary user.
+  - Daytraders/brokers who work at this finance company.
 - **Activity:** What is happening between the players and the light?
+   - Once they notice the light turn red (indicating falling stock prices), the players rush to sell their stock before it fully crashes.
 - **Goals:** What is each player trying to do?
+   - Each player is trying to maximize their profit by buying and trading stock at the right time based on the trend the light indicates.
 
 **Describe your setting, players, activity, and goals here.**
 
@@ -129,11 +132,14 @@ is doing what you've scripted — a person can wave a flashlight, or you can nar
 it aloud.
 
 **Are there things that seemed better on paper than when acted out?**
+The placement of the light seemed simple on paper, but once acted out we didn't know where to place the light, how big or bright it should be, and how other lights in the environment would affect it.
 
 **Did new ideas about the piece surface once you were on your feet?**
+Yes, now we are considering additional ambient outputs like sound, or adapting the environmental distractions based on the urgency of the data (eg. whether this is data that can be read at any time, or if it's extremely urgent and needs to be acted on immediately.) We are also considering adding more colorways or motion to accommodate more data information.
 
 **Are there key moments in the interaction where things could go in a different direction?**
 Iterate your storyboards to capture key non-sequential aspects of the interaction. 
+- Non-urgent interaction: users see the stock light color change, but instead of panic-selling, they know to monitor their finance dashboard for more information. 
 
 ## Part C. Prototype the Light (light first!)
 
@@ -185,6 +191,8 @@ who doesn't should come away understanding what it's famous for. How might you i
 **Please indicate who you collaborated with on this lab.** Be generous in
 acknowledging their contributions, and credit any other influences (YouTube,
 Github, Twitter, a friend who lent you a lamp) that informed your recreation.
+
+Other actors (brokers in the finance office): Xiaoxi Xu, Sarah Rupani, Eric Chen.
 
 ---
 
