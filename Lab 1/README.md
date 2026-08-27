@@ -135,7 +135,7 @@ it aloud.
 The placement of the light seemed simple on paper, but once acted out we didn't know where to place the light, how big or bright it should be, and how other lights in the environment would affect it.
 
 **Did new ideas about the piece surface once you were on your feet?**
-Yes, now we are considering additional ambient outputs like sound, or adapting the environmental distractions based on the urgency of the data (eg. whether this is data that can be read at any time, or if it's extremely urgent and needs to be acted on immediately.) We are also considering adding more colorways or motion to accommodate more data information.
+Yes, now we are considering adapting the brightness or the environmental distractions based on the urgency of the data (eg. whether this is data that can be read at any time, or if it's extremely urgent and needs to be acted on immediately.) The orb can currently be configured at different brightness levels based on personal preference, like if its in a bedroom at night vs if it's in the bright Brookstone office, but we wonder if brightness can add another dimension to the data without introducing totally new and distracting modalities like sound or more lights/datapoints. However, we wonder if we can preserve the easy glance-abilty of the data while adding slightly more information.
 
 **Are there key moments in the interaction where things could go in a different direction?**
 Iterate your storyboards to capture key non-sequential aspects of the interaction. 
