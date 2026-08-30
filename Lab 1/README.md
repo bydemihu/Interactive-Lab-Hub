@@ -4,7 +4,7 @@ _This project is to be done in teams of 2._
 
 **Demi Hu, Alex Yen**
 
-**THE MASTERWORK YOU DREW FROM THE HAT:**
+**THE MASTERWORK YOU DREW FROM THE HAT:** The Ambient Orb: Ambient Devices 2002
 
 ---
 
@@ -84,12 +84,11 @@ drew. Do real research. You are looking less for trivia than for the *shape of
 the interaction*:
 
 - What inputs are available to the user? What responses does the work give?
--    Primarily sight. The user can also configure what data is displayed and how. The work gives a response through color change in reaction to data. 
+   Primary input is sight. The user can also configure what ambient public data is displayed by the orb (weather, stock, etc). The work gives a response through color change in reaction to the data. 
 - Who is present, and how does the piece color the relationships between them?
--    The user/owner of the orb is present. The piece contributes at-a-glance information to the user, and affects the user's subsequent external actions they take. Eg. rushing to sell stock if the market goes down. 
+   The user/owner of the orb is present. The piece contributes at-a-glance information to the user, and affects the user's subsequent external actions they take. For example, maybe they will go to sell their stock if they notice the orb is red, indicating that the stock market is trending down. The relationship between the orb and the user is that of an information display and an agent who acts upon information.
 - What is the piece famous for? What are its strengths and its weaknesses?
--    It's famous for being recognized by the NYT as one of the "Ideas of the Year" in 2002. Another ambient device, Chumby, was commercially produced and proclaimed one of the top gadgets of 2008.
--    One weakness stems from the ambiguity of the data: only the user who sets the data understands what the color means. However, this could also be a strength, as the piece functions as beautiful ambient decor without being overtly a piece of data visualization.  
+   It's famous for being recognized by the NYT as one of the "Ideas of the Year" in 2002. Another ambient device, Chumby, was commercially produced and proclaimed one of the top gadgets of 2008. One possible weakness stems from the ambiguity of the data: only the user who sets the data understands what the color means. However, this could also be a strength, as the piece functions as beautiful ambient decor without being overtly a piece of data visualization. Another weakness is the type of data that it can display. While not a technical limitation in terms of hardware/software, the product is limited to displaying publicly accessible data (weather, stock) and the user must call the manufacturers to request a change. This makes true customization difficult.
 
   Sometimes the details of how the interaction worked are lost in history. Try filling it in with your imagination!
 
@@ -103,14 +102,14 @@ For your masterwork, reconstruct the interaction as a scene:
 
 - **Setting:** Where and when does this interaction happen? (a jungle, a kitchen,
   a spaceship corridor, a nightclub, a harbor at night)
-  - An office building for a finance/trading company. Daytime.
+   An office building for a finance/trading company. Daytime.
 - **Players:** Who is involved? Who else is present? Think through everyone in
   the setting, not just the primary user.
-  - Daytraders/brokers who work at this finance company.
+   Daytraders/brokers who work at this finance company.
 - **Activity:** What is happening between the players and the light?
-   - Once they notice the light turn red (indicating falling stock prices), the players rush to sell their stock before it fully crashes.
+   The light indicates stock market prices: green when it trends up, red when it trends down, amber when it's unchanged. The players periodically glance at the orb while they work. Once they notice the light turn red (indicating falling stock prices), the players rush to sell their stock before the price fully crashes.
 - **Goals:** What is each player trying to do?
-   - Each player is trying to maximize their profit by buying and trading stock at the right time based on the trend the light indicates.
+   Each player is trying to maximize their profit by buying and trading stock at the right time based on the trend the light indicates.
 
 **Describe your setting, players, activity, and goals here.**
 
@@ -136,14 +135,15 @@ is doing what you've scripted — a person can wave a flashlight, or you can nar
 it aloud.
 
 **Are there things that seemed better on paper than when acted out?**
-The placement of the light seemed simple on paper, but once acted out we didn't know where to place the light, how big or bright it should be, and how other lights in the environment would affect it.
+The placement of the light seemed simple on paper, but once acted out we didn't know where to place the light, how big or bright it should be, and how other lights in the environment would affect it. We also weren't able to act out the nuance of a subtle "acknowledgement of information" well. We had to act out a situation where the color of the orb was something urgent that the user needed to take action on immediately, because otherwise it was hard to convey to the viewer whether looking at the orb had any effect on the user at all. 
 
 **Did new ideas about the piece surface once you were on your feet?**
-Yes, now we are considering adapting the brightness or the environmental distractions based on the urgency of the data (eg. whether this is data that can be read at any time, or if it's extremely urgent and needs to be acted on immediately.) The orb can currently be configured at different brightness levels based on personal preference, like if its in a bedroom at night vs if it's in the bright Brookstone office, but we wonder if brightness can add another dimension to the data without introducing totally new and distracting modalities like sound or more lights/datapoints. However, we wonder if we can preserve the easy glance-abilty of the data while adding slightly more information.
+Yes, now we are considering adapting the brightness or the environmental distractions based on the urgency of the data (eg. whether this is data that can be read at any time, or if it's extremely urgent and needs to be acted on immediately.) The orb can currently be configured at different brightness levels based on personal preference, like if its in a bedroom at night vs if it's in the bright finance office, but we wonder if brightness can add another dimension to the data without introducing totally new and distracting modalities like sound or more lights/datapoints. However, we wonder if we can preserve the easy glance-abilty of the data while adding slightly more information.
 
 **Are there key moments in the interaction where things could go in a different direction?**
 Iterate your storyboards to capture key non-sequential aspects of the interaction. 
-- Non-urgent interaction: users see the stock light color change, but instead of panic-selling, they know to monitor their finance dashboard for more information. 
+- Non-urgent interaction: users see the stock light color change, but instead of panic-selling, they know to monitor their finance dashboard for more information.
+- Maybe users also glance at the light periodically throughout the day, but not every glance to capture information is something that needs to be acted upon, just something to keep in mind.
 
 ## Part C. Prototype the Light (light first!)
 
@@ -169,6 +169,7 @@ building any real electronics. (Zoom works well for recording; you can pin the
 video feed of whichever scene you want to capture.)
 
 **Include your first attempts at recording the wizarded set-up here.**
+[link](https://drive.google.com/file/d/1nYmcSf4cxtVzrUj7WxHJjxsWe8U0Xkgg/view)
 
 ## Part E. (optional) Costume the Device
 
@@ -191,6 +192,7 @@ the top of this lab: a viewer who knows the piece should recognize it; a viewer
 who doesn't should come away understanding what it's famous for. How might you illustrate the non-sequential aspects of the interaction in the sketch?
 
 **Include your video here.**
+(ambient orb video: scenario 1 finance office)[https://drive.google.com/file/d/1n9d_fjQq6e5xfY8tYnoIqkk-bbsrOhrN/view]
 
 **Please indicate who you collaborated with on this lab.** Be generous in
 acknowledging their contributions, and credit any other influences (YouTube,
