@@ -83,11 +83,11 @@ Before you prototype anything, get intimately acquainted with the piece you
 drew. Do real research. You are looking less for trivia than for the *shape of
 the interaction*:
 
-- What inputs are available to the user? What responses does the work give?
+- What inputs are available to the user? What responses does the work give?\
    Primary input is sight. The user can also configure what ambient public data is displayed by the orb (weather, stock, etc). The work gives a response through color change in reaction to the data. 
-- Who is present, and how does the piece color the relationships between them?
+- Who is present, and how does the piece color the relationships between them?\
    The user/owner of the orb is present. The piece contributes at-a-glance information to the user, and affects the user's subsequent external actions they take. For example, maybe they will go to sell their stock if they notice the orb is red, indicating that the stock market is trending down. The relationship between the orb and the user is that of an information display and an agent who acts upon information.
-- What is the piece famous for? What are its strengths and its weaknesses?
+- What is the piece famous for? What are its strengths and its weaknesses?\
    It's famous for being recognized by the NYT as one of the "Ideas of the Year" in 2002. Another ambient device, Chumby, was commercially produced and proclaimed one of the top gadgets of 2008. One possible weakness stems from the ambiguity of the data: only the user who sets the data understands what the color means. However, this could also be a strength, as the piece functions as beautiful ambient decor without being overtly a piece of data visualization. Another weakness is the type of data that it can display. While not a technical limitation in terms of hardware/software, the product is limited to displaying publicly accessible data (weather, stock) and the user must call the manufacturers to request a change. This makes true customization difficult.
 
   Sometimes the details of how the interaction worked are lost in history. Try filling it in with your imagination!
@@ -101,17 +101,18 @@ The Ambient Orb is an object that functions as both a decor piece and data visua
 For your masterwork, reconstruct the interaction as a scene:
 
 - **Setting:** Where and when does this interaction happen? (a jungle, a kitchen,
-  a spaceship corridor, a nightclub, a harbor at night)
+  a spaceship corridor, a nightclub, a harbor at night)\
    An office building for a finance/trading company. Daytime.
 - **Players:** Who is involved? Who else is present? Think through everyone in
-  the setting, not just the primary user.
+  the setting, not just the primary user.\
    Daytraders/brokers who work at this finance company.
-- **Activity:** What is happening between the players and the light?
+- **Activity:** What is happening between the players and the light?\
    The light indicates stock market prices: green when it trends up, red when it trends down, amber when it's unchanged. The players periodically glance at the orb while they work. Once they notice the light turn red (indicating falling stock prices), the players rush to sell their stock before the price fully crashes.
-- **Goals:** What is each player trying to do?
+- **Goals:** What is each player trying to do?\
    Each player is trying to maximize their profit by buying and trading stock at the right time based on the trend the light indicates.
 
 **Describe your setting, players, activity, and goals here.**
+Scenario 1: Finance traders in an office have an ambient orb as decor in the space. They look at the orb's color to know at a glance what the stock market trends are. They use this information accordingly when performing their trades, so they can make the best choices based on market trends.
 
 Now **sketch a 3 storyboards** of the interaction you are recreating. (The number may depend on the thing you drew, but stretch your thinking!) They
 don't need to be beautiful, but they must capture and communicate not only the behavior of the light, but how it affects
