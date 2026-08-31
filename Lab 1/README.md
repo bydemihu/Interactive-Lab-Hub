@@ -194,6 +194,7 @@ who doesn't should come away understanding what it's famous for. How might you i
 
 **Include your video here.**
 [ambient orb video: scenario 1 finance office](https://drive.google.com/file/d/1n9d_fjQq6e5xfY8tYnoIqkk-bbsrOhrN/view)
+[ambient orb video: scenario 2 rainy day](https://drive.google.com/file/d/1WoYAYg12S6Ug4SFz1UkYx7Hog9wrbZqN/view)
 
 **Please indicate who you collaborated with on this lab.** Be generous in
 acknowledging their contributions, and credit any other influences (YouTube,
