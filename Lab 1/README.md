@@ -221,6 +221,7 @@ Teams we gave feedback to:\
 [Shuning and Giorgi](https://github.com/SinaL0123/Interactive-Lab-Hub/tree/Fall2026/Lab%201)
 
 **Summarize the feedback you got from your partners here.**
+Feedback from Aurora: I really like the storyboard it's cute! I like that you guys narrowed down its application in the scene that utilizes ambient data visualization in an office setting, and it captured the core of the Ambient Orb of treating data visualization as ambient decor rather than analytical glaze. I do find it a bit difficult to locate the light in the prototypes, and I wonder in the real setting if the light is salient enough to pull attention from the users who seem highly focused (I believe if the room setting is dim, then the small light could also change the room’s lighting so the users can perceive change). I’d also love to learn how the ambient device can handle gradual shifts ( a slow pulse or shifting gradient) rather than binary state changes in urgency.
 
 ## Remix, Update, or Critique the Master
 
