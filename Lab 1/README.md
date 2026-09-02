@@ -83,17 +83,18 @@ Before you prototype anything, get intimately acquainted with the piece you
 drew. Do real research. You are looking less for trivia than for the *shape of
 the interaction*:
 
-- What inputs are available to the user? What responses does the work give?\
+- **What inputs are available to the user? What responses does the work give?**\
    Primary input is sight. The user can also configure what ambient public data is displayed by the orb (weather, stock, etc). The work gives a response through color change in reaction to the data. 
-- Who is present, and how does the piece color the relationships between them?\
+- **Who is present, and how does the piece color the relationships between them?**\
    The user/owner of the orb is present. The piece contributes at-a-glance information to the user, and affects the user's subsequent external actions they take. For example, maybe they will go to sell their stock if they notice the orb is red, indicating that the stock market is trending down. The relationship between the orb and the user is that of an information display and an agent who acts upon information.
-- What is the piece famous for? What are its strengths and its weaknesses?\
+- **What is the piece famous for? What are its strengths and its weaknesses?**\
    It's famous for being recognized by the NYT as one of the "Ideas of the Year" in 2002. Another ambient device, Chumby, was commercially produced and proclaimed one of the top gadgets of 2008. One possible weakness stems from the ambiguity of the data: only the user who sets the data understands what the color means. However, this could also be a strength, as the piece functions as beautiful ambient decor without being overtly a piece of data visualization. Another weakness is the type of data that it can display. While not a technical limitation in terms of hardware/software, the product is limited to displaying publicly accessible data (weather, stock) and the user must call the manufacturers to request a change. This makes true customization difficult.
 
   Sometimes the details of how the interaction worked are lost in history. Try filling it in with your imagination!
 
 **Describe your masterwork here, in your own words. What is the core interaction
 someone would recognize it by?**
+\
 The Ambient Orb is an object that functions as both a decor piece and data visualization for important information that can be read at a glance. It can be configured by the user to display certain data they wish to have easily accessible, for example, a positivity/negativity indicator for daily stock market trends. It is designed to display real-time data non-intrusively, treating data visualization as an ambient indicator to be noticed rather than analyzed. The core interaction someone would recognize it by is a user, upon seeing the color of the orb, distilling information from it and performing some action as a result. 
 
 ## Part A. Plan
@@ -111,7 +112,7 @@ For your masterwork, reconstruct the interaction as a scene:
 - **Goals:** What is each player trying to do?\
    Each player is trying to maximize their profit by buying and trading stock at the right time based on the trend the light indicates.
 
-**Describe your setting, players, activity, and goals here.**
+**Describe your setting, players, activity, and goals here.**\
 Scenario 1: Finance traders in an office have an ambient orb as decor in the space. They look at the orb's color to know at a glance what the stock market trends are. They use this information accordingly when performing their trades, so they can make the best choices based on market trends.
 
 Now **sketch a 3 storyboards** of the interaction you are recreating. (The number may depend on the thing you drew, but stretch your thinking!) They
@@ -123,8 +124,6 @@ and the people around it. If you're new to storyboarding, read
 <img width="2319" height="1426" alt="image" src="https://github.com/user-attachments/assets/ecc464e5-604a-42c2-b936-cf8d77fbecfd" />
 <img width="2884" height="1146" alt="image" src="https://github.com/user-attachments/assets/34e02756-8b2e-4e31-ad65-a11b8012ba3b" />
 
-
-
 Use the storyboards to decide what interaction to prototype.
 
 **Summarize the feedback you got here.**
@@ -135,14 +134,14 @@ Physically act out the interaction you planned. For now, just pretend the light
 is doing what you've scripted — a person can wave a flashlight, or you can narrate
 it aloud.
 
-**Are there things that seemed better on paper than when acted out?**
+**Are there things that seemed better on paper than when acted out?**\
 The placement of the light seemed simple on paper, but once acted out we didn't know where to place the light, how big or bright it should be, and how other lights in the environment would affect it. We also weren't able to act out the nuance of a subtle "acknowledgement of information" well. We had to act out a situation where the color of the orb was something urgent that the user needed to take action on immediately, because otherwise it was hard to convey to the viewer whether looking at the orb had any effect on the user at all. 
 
-**Did new ideas about the piece surface once you were on your feet?**
+**Did new ideas about the piece surface once you were on your feet?**\
 Yes, now we are considering adapting the brightness or the environmental distractions based on the urgency of the data (eg. whether this is data that can be read at any time, or if it's extremely urgent and needs to be acted on immediately.) The orb can currently be configured at different brightness levels based on personal preference, like if its in a bedroom at night vs if it's in the bright finance office, but we wonder if brightness can add another dimension to the data without introducing totally new and distracting modalities like sound or more lights/datapoints. However, we wonder if we can preserve the easy glance-abilty of the data while adding slightly more information.
 
 **Are there key moments in the interaction where things could go in a different direction?**
-Iterate your storyboards to capture key non-sequential aspects of the interaction. 
+Iterate your storyboards to capture key non-sequential aspects of the interaction. \
 - Non-urgent interaction: users see the stock light color change, but instead of panic-selling, they know to monitor their finance dashboard for more information.
 - Maybe users also glance at the light periodically throughout the day, but not every glance to capture information is something that needs to be acted upon, just something to keep in mind.
 
@@ -192,8 +191,8 @@ and calm for a bedroom?
 the top of this lab: a viewer who knows the piece should recognize it; a viewer
 who doesn't should come away understanding what it's famous for. How might you illustrate the non-sequential aspects of the interaction in the sketch?
 
-**Include your video here.**
-[ambient orb video: scenario 1 finance office](https://drive.google.com/file/d/1n9d_fjQq6e5xfY8tYnoIqkk-bbsrOhrN/view)
+**Include your video here.**\
+[ambient orb video: scenario 1 finance office](https://drive.google.com/file/d/1n9d_fjQq6e5xfY8tYnoIqkk-bbsrOhrN/view) \
 [ambient orb video: scenario 2 rainy day](https://drive.google.com/file/d/1WoYAYg12S6Ug4SFz1UkYx7Hog9wrbZqN/view)
 
 **Please indicate who you collaborated with on this lab.** Be generous in
