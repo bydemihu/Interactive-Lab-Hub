@@ -216,7 +216,7 @@ guess the masterwork and the goals of the characters, and ask about anything tha
 wasn't clear.
 
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
-Teams we gave feedback to: (Aurora and Gabriella)[https://github.com/aurorajxshen/Interactive-Lab-Hub/tree/Fall2026/Lab%201], 
+Teams we gave feedback to: [Aurora and Gabriella](https://github.com/aurorajxshen/Interactive-Lab-Hub/tree/Fall2026/Lab%201), 
 
 **Summarize the feedback you got from your partners here.**
 
