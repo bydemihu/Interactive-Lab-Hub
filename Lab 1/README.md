@@ -141,7 +141,7 @@ The placement of the light seemed simple on paper, but once acted out we didn't 
 Yes, now we are considering adapting the brightness or the environmental distractions based on the urgency of the data (eg. whether this is data that can be read at any time, or if it's extremely urgent and needs to be acted on immediately.) The orb can currently be configured at different brightness levels based on personal preference, like if its in a bedroom at night vs if it's in the bright finance office, but we wonder if brightness can add another dimension to the data without introducing totally new and distracting modalities like sound or more lights/datapoints. However, we wonder if we can preserve the easy glance-abilty of the data while adding slightly more information.
 
 **Are there key moments in the interaction where things could go in a different direction?**
-Iterate your storyboards to capture key non-sequential aspects of the interaction. \
+Iterate your storyboards to capture key non-sequential aspects of the interaction.
 - Non-urgent interaction: users see the stock light color change, but instead of panic-selling, they know to monitor their finance dashboard for more information.
 - Maybe users also glance at the light periodically throughout the day, but not every glance to capture information is something that needs to be acted upon, just something to keep in mind.
 
@@ -215,7 +215,10 @@ guess the masterwork and the goals of the characters, and ask about anything tha
 wasn't clear.
 
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
-Teams we gave feedback to: [Aurora and Gabriella](https://github.com/aurorajxshen/Interactive-Lab-Hub/tree/Fall2026/Lab%201), 
+Teams we gave feedback to:\
+[Aurora and Gabriella](https://github.com/aurorajxshen/Interactive-Lab-Hub/tree/Fall2026/Lab%201), \
+[Viktor and Jovian](https://github.com/LaboriouslyExquisite/Interactive-Lab-Hub/blob/Fall2026/Lab%201/README.md),\
+[Shuning and Giorgi](https://github.com/SinaL0123/Interactive-Lab-Hub/tree/Fall2026/Lab%201)
 
 **Summarize the feedback you got from your partners here.**
 
