@@ -257,16 +257,24 @@ your response engages with what your master was really doing.
 prototype are great too.**
 
 ## Idea List for Remix:
-One thing we kept in mind was how can we remix the device while staying true to its core purpose of ambience? This is what sets it aside from an alarm or other notification device. We thought a lot about adding vibration, sound, etc. as a way to make it more noticeable, but the point of the ambient device isn't that it demands attention. It is peaceful and existing on the periphery of the user's experience, and the interaction is always fully voluntary and initited by the user rather than the other way around. 
+One thing we kept in mind was how can we remix the device while staying true to its core purpose of ambience? This is what sets it aside from an alarm or other notification device. We thought a lot about adding vibration, sound, etc. as a way to make it more noticeable, but the point of the ambient device isn't that it demands attention. It is a subtle, peaceful object that exists on the periphery of the user's experience, and the interaction is always fully voluntary and initiated by the user rather than the other way around. 
 
 Knowing this, what are ways we can remix the master while preserving its core interaction philosphy?
 
-- Idea 1: make it wearable. It's now a portable ambient data display: you become or carry the data, rather than it being constrained to a location.
+- Idea 1: make it wearable. It's now a portable ambient data display: you become or carry the data, rather than it being constrained to a location. This fixes a weakness of it being constrained to one location when it's meant to display ever-changing data that a user would want to access at different times of the day or in different scenarios. 
    - Ambient Band: displays step goal progress to document personal fitness habits. Goes from a green->yellow->red color based on how far away from your daily step goal you are, taking into account the time of day. The user can check it and see at-a-glance whether they have been as active as they want to be.
    - Ambient Headlamp: displays live sales data (stock management) for a vendor. Imagine a popular NYC hotdog cart vendor wearing this on his head while running his stand: other users can see if he still has food to sell.
  
 - Idea 2: make it display more data by introducing another dimension of motion, or more lights. We don't want another modality for the sake of attention-getting, but what about for the sake of being able to display more nuanced or accessible information? This was a weakness we identified from the original.
    - Ambient Rainbow: LED arc that displays weather forecast for the next few hours. The color defines temperature, flickering speed defines precicipitation severity, and the placement of the lights (left to right along the rainbow) displays how far ahead in the future that forecast is.
+   - Ambient Morse: Ambient orb that strobes to display text or numerical information. Slightly more color-blindness friendly.
+ 
+- Idea 3: make it the main light! Right now it's a decor object, but what if it colored the entire environment? What if there was a pervasive underlying soundtrack, so it becomes like a constant miasma of information that undercuts all the user's actions?
+  - Ambient Air: combination of subtle room-level lighting and a constant low ambient soundtrack. Maybe a very ominous hum or whir and red tint for when the finance bros in the daytrading office really need to get their money up. Maybe it's subtle enough that they will barely notice it on the surface, but will feel something wrong in their gut.
+ 
+## Storyboard
+<img width="2100" height="1574" alt="image" src="https://github.com/user-attachments/assets/57de15aa-ab7b-4ddf-b867-761a01aa137c" />
+
 
 ---
 
