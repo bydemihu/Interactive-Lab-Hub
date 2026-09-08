@@ -275,6 +275,9 @@ Knowing this, what are ways we can remix the master while preserving its core in
 ## Storyboard
 <img width="2100" height="1574" alt="image" src="https://github.com/user-attachments/assets/57de15aa-ab7b-4ddf-b867-761a01aa137c" />
 
+## Video
+[Ambient Band Video](https://drive.google.com/file/d/1p64lQtE5muzTrbsL11CxS_Trt-42TeAg/view?pli=1)
+
 
 ---
 
