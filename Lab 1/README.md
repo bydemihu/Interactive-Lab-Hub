@@ -221,7 +221,7 @@ Teams we gave feedback to:\
 [Shuning and Giorgi](https://github.com/SinaL0123/Interactive-Lab-Hub/tree/Fall2026/Lab%201)
 
 **Summarize the feedback you got from your partners here.**
-Overall, the other groups found the video easy to understand and it aligned well with how the ambient orb actually works. One pain point was visibility: the light was difficult to locate, and one person noted it may not be salient enough to pull attention from focused users. However, we wanted to consider that the orb is meant to be ambient and voluntary to look at. Another user noted how it was easy to receive information without interrupting their work. 
+Overall the other groups found the video easy to understand and it aligned well with how the ambient orb actually works. One pain point was visibility: the light was difficult to locate, and one person noted it may not be salient enough to pull attention from focused users. However, we wanted to consider that the orb is meant to be ambient and voluntary to look at. Another user noted how it was easy to receive information without interrupting their work. 
 
 Problems noted: 
 - One scenario alone is also not enough to demonstrate the programmability of the orb, that it can display different types of data based on what the user wants to display.
@@ -272,8 +272,22 @@ Knowing this, what are ways we can remix the master while preserving its core in
 - Idea 3: make it the main light! Right now it's a decor object, but what if it colored the entire environment? What if there was a pervasive underlying soundtrack, so it becomes like a constant miasma of information that undercuts all the user's actions?
   - Ambient Air: combination of subtle room-level lighting and a constant low ambient soundtrack. Maybe a very ominous hum or whir and red tint for when the finance bros in the daytrading office really need to get their money up. Maybe it's subtle enough that they will barely notice it on the surface, but will feel something wrong in their gut.
  
+## The Form
+We ended up going with the wearable direction as we felt it engaged the best with the original masters: something subtle and elegant, easy to access data at-a-glance, but able to be mistaken for purely decor. Just as the original orb was a full egg/sphere of light, we created a bracelet where the entire thing was the light.
+
+To create this as a prototype, we realized our original idea of using a real LED lightbulb or using a phone light to tinkerbelle the interaction would not work well when translating to a video interaction. So instead, we used a fluorescent strip of paper for our bracelet. In the video, the bracelet was chroma-keyed to show the changes in color, and we were able to achieve a stronger, more realistic glowing band effect that matched the subtleties of the form we were hoping to express. 
+ 
 ## Storyboard
 <img width="2100" height="1574" alt="image" src="https://github.com/user-attachments/assets/57de15aa-ab7b-4ddf-b867-761a01aa137c" />
+
+**Are there things that seemed better on paper than when acted out?**\
+The brightness of the band seemed better on paper, but when acted out we realized it might be a bit distracting to actually wear a glowing band. While light is commonly used for home decor, it's not as commonly used in clothing, so this form made it slightly more eccentric in its context. 
+
+**Did new ideas about the piece surface once you were on your feet?**\
+Yes, we imagined what it would be like if the bands were linked or paired. Perhaps if the bands indicated step progress like in our storyboard, a partner's band could instead display step progress relative to the other person rather than relative to some individual goal. This could create an interesting competitive effect.
+
+**Are there key moments in the interaction where things could go in a different direction?**
+Yes, we wondered what would happen if someone else noticed the band. It's meant to be personal data, but I think a light worn on the body might raise questions, even if external people don't know the data it represents.
 
 ## Video
 [Ambient Band Video](https://drive.google.com/file/d/1p64lQtE5muzTrbsL11CxS_Trt-42TeAg/view?pli=1)
