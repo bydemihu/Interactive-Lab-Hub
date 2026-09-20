@@ -1,5 +1,5 @@
 # Interactive Prototyping: The Clock of Pi
-**NAMES OF COLLABORATORS HERE**
+**Demi Hu, Alexa Yang**
 
 Does it feel like time is moving strangely during this semester?
 
@@ -8,7 +8,7 @@ For our first Pi project, we will pay homage to the [timekeeping devices of old]
 It is worth spending a little time thinking about how you mark time, and what would be useful in a clock of your own design.
 
 **Please indicate anyone you collaborated with on this Lab here.**
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+Consultants: Elliott Kalt and Jovian Wang
 
 ## Prep
 
@@ -157,6 +157,9 @@ You can look in `screen_boot_script.py` for how to display text on the screen!
 You can look in `image.py` for an example of how to display an image on the screen. Can you make it switch to another image when you push one of the buttons?
 
 \*\*\***Include a picture of your own Raspberry Pi displaying the piscreen.service with your unique MAC address. Additionally, please provide another picture showing the successful completion of the screen test.**\*\*\*
+<img width="2160" height="2880" alt="IMG_9165" src="https://github.com/user-attachments/assets/0097510b-48da-4d44-a2b7-10e3389f6796" />
+<img width="2160" height="2880" alt="IMG_9164" src="https://github.com/user-attachments/assets/f44aa4ca-5c5b-4e36-b871-7bce62ea1a54" />
+
 
 
 ## Part D. 
@@ -193,10 +196,12 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 
 ** Insert ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf)), storyboards for your ideas **
+<img width="1280" height="932" alt="image" src="https://github.com/user-attachments/assets/4b76d42f-973d-4a7a-91b6-528de6903a94" />
 
 
 
 **Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
+Jovian Wang, Elliot Kalt
 
 # Lab 2 Part 2
 
