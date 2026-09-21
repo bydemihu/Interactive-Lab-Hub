@@ -250,8 +250,23 @@ Do take advantage of having done the previous iteration to refine and simplify y
 
 ** Insert any updates ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf))!, storyboards for your ideas **
 <img width="1280" height="932" alt="image" src="https://github.com/user-attachments/assets/533c8196-420c-423b-879a-5a5306fc3e64" />
-Idea: animated dog clock. The dog has different behaviors based on the time of the day: Happy to start the day in the morning, playing in the afternoon, taking a walk in the evening, and sleeping at night.
+Idea: animated dog clock. The dog has different behaviors based on the time of the day: Happy to start the day in the morning, playing in the afternoon, taking a walk in the evening, and sleeping at night. This shows changes in time as reflected in the behaviors of an animal throughout the day.
 
+The color of the dog's coat also gets darker as time goes on throughout the day, reflecting changes in daylight (somewhat; it gets lighter to darker even though technically mid-day gets the most sun).
+
+
+Animated Loops:
+Morning (Alexa):
+<img width="240" height="135" alt="afternoon" src="https://github.com/user-attachments/assets/622215c9-c95c-48f4-b6c2-efec26fbc2a3" />
+
+Afternoon (Alexa):
+<img width="240" height="135" alt="morning" src="https://github.com/user-attachments/assets/5121c023-712b-4b5b-8061-271a78e593f6" />
+
+Evening (Demi):
+<img width="240" height="135" alt="evening" src="https://github.com/user-attachments/assets/b938c45e-abaa-426c-b7d2-77279d8bd766" />
+
+Night (Demi):
+<img width="240" height="135" alt="night" src="https://github.com/user-attachments/assets/31e702b9-025f-4e8b-b330-8aecf67cd2fa" />
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
