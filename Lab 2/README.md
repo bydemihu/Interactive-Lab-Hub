@@ -216,6 +216,9 @@ Jovian Wang, Elliot Kalt
 
 2. Look at and give feedback on the Part E. for at least 3 other people in the class and get 3 people to comment on your Part E!)
 **Put the feedback for your ideas here.**
+1. What if the dog's coat changed color based on time of day as well?
+2. What if this could be used to indicate the dog's needs based on time of day (when it needs to be fed, when it needs to be taken on a walk, when it needs to sleep, etc.?)
+3. Maybe add sound for the former so it acts as a time-based notification as well, not just a visual clock?
 
 ## Update your Lab Hub
 
