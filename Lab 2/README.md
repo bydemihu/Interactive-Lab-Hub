@@ -159,6 +159,11 @@ You can look in `image.py` for an example of how to display an image on the scre
 \*\*\***Include a picture of your own Raspberry Pi displaying the piscreen.service with your unique MAC address. Additionally, please provide another picture showing the successful completion of the screen test.**\*\*\*
 <img width="2160" height="2880" alt="IMG_9165" src="https://github.com/user-attachments/assets/0097510b-48da-4d44-a2b7-10e3389f6796" />
 <img width="2160" height="2880" alt="IMG_9164" src="https://github.com/user-attachments/assets/f44aa4ca-5c5b-4e36-b871-7bce62ea1a54" />
+<img width="1064" height="1048" alt="image" src="https://github.com/user-attachments/assets/399abf6d-bf46-46c4-b2e7-566781f3617f" />
+
+
+
+
 
 
 
@@ -225,6 +230,9 @@ Start small, pick just one element of your overall idea, just to show you have a
 ## Make a short video of your modified barebones PiClock
 
 \*\*\***Take a video of your barely modified PiClock.**\*\*\*
+<img width="1200" height="1600" alt="image" src="https://github.com/user-attachments/assets/0e68cce5-a210-46fd-a5ba-5a907295072a" />
+
+(https://drive.google.com/file/d/1LQSSI3kW85W265_ADIAh-79JJhzxT1fd/view?usp=sharing)
 
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
 
@@ -241,11 +249,14 @@ After that, Git will ask you to login to your GitHub account to push the updates
 Do take advantage of having done the previous iteration to refine and simplify your design.
 
 ** Insert any updates ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf))!, storyboards for your ideas **
+<img width="1280" height="932" alt="image" src="https://github.com/user-attachments/assets/533c8196-420c-423b-879a-5a5306fc3e64" />
+Idea: animated dog clock. The dog has different behaviors based on the time of the day: Happy to start the day in the morning, playing in the afternoon, taking a walk in the evening, and sleeping at night.
 
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
 \*\*\***Take a video of your PiClock.**\*\*\*
+[https://drive.google.com/file/d/1xKf9fPfVOf7wll5iS7bEdfwV3ruT8p8J/view]
 
 
 As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.
