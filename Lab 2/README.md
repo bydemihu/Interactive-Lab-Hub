@@ -260,11 +260,11 @@ Animated Loops:
 
 Morning (Alexa):
 
-<img width="240" height="135" alt="afternoon" src="https://github.com/user-attachments/assets/622215c9-c95c-48f4-b6c2-efec26fbc2a3" />
+<img width="240" height="135" alt="morning" src="https://github.com/user-attachments/assets/5121c023-712b-4b5b-8061-271a78e593f6" />
 
 Afternoon (Alexa):
 
-<img width="240" height="135" alt="morning" src="https://github.com/user-attachments/assets/5121c023-712b-4b5b-8061-271a78e593f6" />
+<img width="240" height="135" alt="afternoon" src="https://github.com/user-attachments/assets/622215c9-c95c-48f4-b6c2-efec26fbc2a3" />
 
 Evening (Demi):
 
