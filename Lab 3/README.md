@@ -130,6 +130,33 @@ The transcript is not the interesting output here — the timings are. Run it ag
 Available sizes, smallest first: `tiny.en`, `base.en`, `small.en`, `medium.en`. The `.en` variants are English-only and faster than their multilingual counterparts at the same size.
 
 \*\***Record a few seconds of your own speech (`arecord -d 5 -f cd -c 1 -r 16000 test.wav`) and transcribe it with at least two model sizes. Report the real-time factor for each. At what point does the accuracy improvement stop being worth the delay, for a system that has to answer you?**\*\*
+```(.venv) pi@demipi:~/Interactive-Lab-Hub/Lab 3/speech-scripts $ python transcribe.py test.wav --model base.en
+
+I'm recording a test audio for transcription.
+
+model            base.en (int8, beam=1)
+audio duration   5.00s
+model load       0.73s
+transcription    2.03s
+real-time factor 0.41x
+
+(Model load is a one-time cost per process. In an interactive system you load once and keep the model resident  which is what listen.py does.)
+(.venv) pi@demipi:~/Interactive-Lab-Hub/Lab 3/speech-scripts $ python transcribe.py test.wav --model small.en
+
+Hi, I'm recording a test audio for transcription.
+
+model            small.en (int8, beam=1)
+audio duration   5.00s
+model load       34.74s
+transcription    5.53s
+real-time factor 1.11x
+
+(Model load is a one-time cost per process. In an interactive system you load once and keep the model resident  which is what listen.py does.)
+```
+
+
+
+
 
 \*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* Numbers are a good stress test — transcription systems make characteristic errors on digit strings, and you will want to know what they are before you design around them.
 
