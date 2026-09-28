@@ -239,7 +239,7 @@ I changed the pause from 0.4s default to 0.3s because in this scenario, the part
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing. Please record this interaction (for example, using Zoom's record feature).
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
-
+This dialogue was slightly different than what I imagined: my partner was taken aback, as I expected, and she did realize the pattern that seemed to be occuring was that I'd say one thing, then say another, more honest response to her initial question. However, because I was using my own voice to represent both my "own voice" and the "device voice", She couldn't quite figure out if I was pretending to be two different people, two personalities in one person, or simply changing my mind and deciding to be more honest or unhinged the second time around. The back-and-forth went pretty smoothly timing-wise, she was able to differentiate between when I was pausing between my "own voice" and the "device voice" and when I was finished with my response and awaiting hers.
 
 ---
 
