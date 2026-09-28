@@ -139,6 +139,19 @@ real-time factor 0.82x
 
 
 \*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* Numbers are a good stress test — transcription systems make characteristic errors on digit strings, and you will want to know what they are before you design around them.
+Saved as numerical_input.sh.
+```
+Respondent's answer:
+
+3.141592653
+
+model            tiny.en (int8, beam=1)
+audio duration   5.00s
+model load       0.66s
+transcription    0.96s
+real-time factor 0.19x
+```
+I was surprised that the transcription was surprisingly context-aware. The script asks for digits of pi. I verbally said "three point one", and the system was able to interpret that as a decimal point instead of literally the word "point".
 
 ## C. Turn-taking: knowing when someone has stopped talking
 
@@ -150,6 +163,13 @@ We use a **voice activity detector** (VAD) to segment the microphone stream into
 (.venv) $ cd speech-scripts
 (.venv) $ python listen.py
 ```
+```[2.0s speech, 1.03s to transcribe]  I mean I guess it's not bad. This is...
+[2.3s speech, 0.95s to transcribe]  approximately like how I would.
+[1.7s speech, 0.87s to transcribe]  talk in real life maybe?
+[22.7s speech, 2.70s to transcribe]  If I'm rambling then everything gets counted as one sentence, because one thought flows into the other, like it's a stream of consciousness. Like if I'm talking about my favorite novel or my theories for it, or I have some ideas that I want to share, but if I'm pausing in between a thought and I'm not just like continuously rambling, then this threshold separates it into two separate.
+[1.6s speech, 0.83s to transcribe]  out of princess.
+[2.4s speech, 0.82s to transcribe]  I said utterances.
+```
 
 Speak, pause, and watch it transcribe. Now change the endpointing threshold — the amount of silence the system requires before it decides your turn is over:
 
@@ -159,6 +179,9 @@ Speak, pause, and watch it transcribe. Now change the endpointing threshold — 
 ```
 
 \*\***Try both extremes, and something in between. Describe what each one feels like to talk to. Note specifically: at 0.2s, what kinds of normal speech get cut off? At 1.5s, what does the delay make the system seem like?**\*\*
+The 0.2 is rather difficult to talk to if I'm pausing to gather my thoughts when giving a longer, thought-out response. It feels like I have no room for error at all if I want to express more than one idea vs a standard small-talk back and forth. I could see it working well for a system that asks and expects responses to questions such as "how are you?" and "what's your name?" but a system that requires the user to answer something like "tell me about your favorite memory" will need a lot more space to allow users to actually complete their thoughts. I think users (or perhaps me especially), tend to use a little bit of filler such as "um" or "like" during pauses when collecting thoughts, naturally indicating to a receiver that the turn is not over. A system that purely uses a time-based threshold to identify end-of-turn doesn't capture that nuance.
+
+The 1.5 starts to feel sluggish and unresponsive no matter what my answer type is. When I ramble to it, at least it fully captures my sentiment before transcribing, so I'm not at risk of having a sentence cut off in the middle like with the 0.2, but when I give short responses, it starts to feel like an unnecessarily long cutoff to the point of frustration.
 
 There is no correct value. A system that takes drink orders and a system that listens to someone think out loud want very different thresholds, and the right one depends on what your users are doing with their pauses.
 
@@ -175,12 +198,41 @@ There is no correct value. A system that takes drink orders and a system that li
 Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stuck? Make a device that talks for dogs. If that is too stupid, find an application that is better than that.)
 
 \*\***Post your storyboard and diagram here.**\*\*
+Idea: speech device that translates the user's speech into the most unfiltered version of their honest inner thoughts, like a truth serum. It detects when they're being too shy to confess, too polite to criticize, or too scared to push back, and revises their speech on-the-spot.
+<img width="1920" height="1080" alt="Illustration" src="https://github.com/user-attachments/assets/968981b8-3619-4473-8f25-1bc8fc385679" />
+
+Diagram:
+<img width="1190" height="318" alt="image" src="https://github.com/user-attachments/assets/e758ffa5-c82e-4cfa-b3af-385b8a36a201" />
+
+
 
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses.
+
+**Script:**
+
+In this scenario, the mic only detects the user's speech, not the partner's.
+
+Partner: Oh, hey! How's it going?
+
+User: It's going okay, I guess. I'm a little stressed.
+
+(pause 0.3 seconds)
+
+Device: I'm doing horribly. I am so stressed and busy.
+
+Partner: Oh, uh, I didn't realize? Sorry, do you want to talk about it?
+
+User: It's alright, haha, I'm just a little overwhelmed with work right now.
+
+(pause 0.3 seconds)
+
+Device: It's not alright and I do not want to talk about it. I am so sorry for the rudeness and I know you mean well but I need to go right now.
 
 \*\***Please describe and document your process.**\*\*
 
 Your script should include the pauses. Where does your device wait, and for how long? You now know from Part C that this is a parameter you have to choose, not something that happens for free.
+
+I changed the pause from 0.4s default to 0.3s because in this scenario, the partner isn't going to necessarily wait for the device, and they might try to respond directly to the user. This also assumes a more surface-level conversation where the dialogue can be more direct and back-and-forth, rather than long-winded rambling with someone the user is close to (in which case they wouldn't need the anti-filter device, because they would be conversing with someone they can be more honest with.)
 
 ## E. Acting out the dialogue
 
