@@ -105,26 +105,31 @@ The transcript is not the interesting output here — the timings are. Run it ag
 Available sizes, smallest first: `tiny.en`, `base.en`, `small.en`, `medium.en`. The `.en` variants are English-only and faster than their multilingual counterparts at the same size.
 
 \*\***Record a few seconds of your own speech (`arecord -d 5 -f cd -c 1 -r 16000 test.wav`) and transcribe it with at least two model sizes. Report the real-time factor for each. At what point does the accuracy improvement stop being worth the delay, for a system that has to answer you?**\*\*
+
+The real-time factor for the base size is 0.27x, while the real-time factor for the small model size is 0.82x. I tested with both 5 seconds of my speech and 10 seconds. The two models transcribed my speech the same way at both sizes, indicating no clear differences in accuracy, though I also did not say anything particularly complex. I think there were more noticeable differences in transcription time. When I recorded 10 seconds of speech, the small model took noticeably longer than the base model to transcribe (at 5 seconds, transcription took 2.5 and 5.3 seconds, for base and small respectively). I think when the system needs to record more than 10 seconds of speech, the accuracy improvement is no longer worth the delay, because the lag starts feeling like an error rather than a natural time spent waiting for a response. 
+
 ```(.venv) pi@demipi:~/Interactive-Lab-Hub/Lab 3/speech-scripts $ python transcribe.py test.wav --model base.en
 
-I'm recording a test audio for transcription.
+Hello, I am speaking and testing a new transcription. My name is Demi. Hello, hi, hello, hello, hello.
 
 model            base.en (int8, beam=1)
-audio duration   5.00s
-model load       0.73s
-transcription    2.03s
-real-time factor 0.41x
+audio duration   10.00s
+model load       2.75s
+transcription    2.71s
+real-time factor 0.27x
 
 (Model load is a one-time cost per process. In an interactive system you load once and keep the model resident  which is what listen.py does.)
+(.venv) pi@demipi:~/Interactive-Lab-Hub/Lab 3/speech-scripts $ arecord -d 10 -f cd -c 1 -r 16000 test.wav
+Recording WAVE 'test.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
 (.venv) pi@demipi:~/Interactive-Lab-Hub/Lab 3/speech-scripts $ python transcribe.py test.wav --model small.en
 
-Hi, I'm recording a test audio for transcription.
+Hello, I am speaking and testing a new transcription. My name is Demi. Hello, hi, hello, hello, hello.
 
 model            small.en (int8, beam=1)
-audio duration   5.00s
-model load       34.74s
-transcription    5.53s
-real-time factor 1.11x
+audio duration   10.00s
+model load       6.48s
+transcription    8.22s
+real-time factor 0.82x
 
 (Model load is a one-time cost per process. In an interactive system you load once and keep the model resident  which is what listen.py does.)
 ```
