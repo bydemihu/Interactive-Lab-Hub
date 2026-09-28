@@ -81,9 +81,10 @@ The demo script also shows `--output-raw`, which streams audio to the speaker as
 
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
 (This shell file should be saved to your own repo for this lab.)
-Saved as 
+Saved as hidemi.sh
 
 \*\***Then answer: Is the same greeting, in these different voices, the same greeting? Describe one concrete way the voice changed what the utterance seemed to mean or who seemed to be speaking.**\*\*
+No, it's not the same greeting. Espeak seemed to greet me with more of a formal, sharp tone. Festival's greeting was softer, slower, and more gentle, but also more robotic. Espeak almost seemed in a hurry while Festival was more languid.
 
 ## B. Speech to Text
 
