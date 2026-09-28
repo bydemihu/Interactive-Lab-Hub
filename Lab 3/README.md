@@ -1,15 +1,5 @@
 
 
-https://github.com/user-attachments/assets/1d2e7577-b975-4e24-a053-a08347bed221
-
-
-
-https://github.com/user-attachments/assets/5a65dd55-461a-4db2-8500-7838d3da6bd7
-
-
-
-https://github.com/user-attachments/assets/bd65419b-f0ae-4e33-8aaa-e8e9e00143ab
-
 # Chatterboxes
 
 **Demi Hu**
