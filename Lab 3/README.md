@@ -272,11 +272,11 @@ The system should:
 Pressing the rotary encoder toggles between the "listening" and "not listening" states. While it's listening, it captures speech until there is 0.4 seconds of silence, until which it transcribes the speech based on what it thinks is the emotionally unfiltered, socially unacceptable version of what the user was truly trying to express. In this version, the user themselves presses the rotary encoded to unfilter their own speech, effectively **outsourcing to an external device the communication of difficult things they truly feel but can't/shouldn't express.** 
 
 **Version 2\\**
-The device is always listening. It continously captures and separates speech into chunks based on the 0.4s silence threshold, but only keeps the last one or two. When the rotary encoder is pressed, it "unfilters" the very last speech chunk. Any participant can press the rotary encoder to "unfilter" a piece of speech, so in this version it acts as a **neutral intent decoder for when you doubt your conversational partner is being totally honest with you.**\\
+The device is always listening. It continously captures and separates speech into chunks based on the 0.4s silence threshold, but only keeps the last one or two. When the rotary encoder is pressed, it "unfilters" the very last speech chunk. Any participant can press the rotary encoder to "unfilter" a piece of speech, so in this version it acts as a **neutral intent decoder for when you doubt your conversational partner is being totally honest with you.**  
 
-In both versions:\\
-Turning the rotary encoder clockwise increases the "unfiltered-ness", which determines how much the device interprets the speech at face value vs reads deeply into it and makes exaggerated assumptions about intent.\\
-The screen displays a progress bar that indicates how much unfiltered-ness is applied. The screen pulses from black to grey while it's listening, and turns a different solid color based on the emotion captured. It recognizes the 5 following underlying "socially unacceptable" (or that someone generally would want to suppress in polite conversation) emotions: anger, avoidance, tiredness, jealousy, and desire. \\
+In both versions:  
+Turning the rotary encoder clockwise increases the "unfiltered-ness", which determines how much the device interprets the speech at face value vs reads deeply into it and makes exaggerated assumptions about intent.  
+The screen displays a progress bar that indicates how much unfiltered-ness is applied. The screen pulses from black to grey while it's listening, and turns a different solid color based on the emotion captured. It recognizes the 5 following underlying "socially unacceptable" (or that someone generally would want to suppress in polite conversation) emotions: anger, avoidance, tiredness, jealousy, and desire.  
 The LLM prompt states that it should **translate the input into what the user would say if they had no social filter, taking into account their underlying emotion that they might be hiding.** The LLM is told to return a json containing the text translation, as well as a one-word emotion identifier from the list of five emotions. The text translation is processed with TTS and played via the speaker, and the emotion designation determines the screen color. 
 
 
@@ -285,7 +285,7 @@ The LLM prompt states that it should **translate the input into what the user wo
 <img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/4413aac7-8635-457b-a383-cc4bf0a3a6aa" />
 
 
-Version 1 (speaker controls unfiltering device): [https://youtu.be/cdcvRo6nexY]
+Version 1 (speaker controls unfiltering device): [https://youtu.be/cdcvRo6nexY]  
 Version 2 (unfiltering device is neutral and any party can invoke it): [https://youtu.be/_J7QpAYIBFU]
 
 
@@ -297,17 +297,17 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-What worked well:\
-The actual transcription process. The model came up with some hilariously unhinged responses. It translated "Let's clean the apartment" to "The apartment is disgusting. Clean it before the dust starts having to pay rent." It often came up with little quips of jokes that added a lot of character to the unfiltered response, and for the most part interpreted the underlying emotion/intention fairly well.\
+What worked well:  
+The actual transcription process. The model came up with some hilariously unhinged responses. It translated "Let's clean the apartment" to "The apartment is disgusting. Clean it before the dust starts having to pay rent." It often came up with little quips of jokes that added a lot of character to the unfiltered response, and for the most part interpreted the underlying emotion/intention fairly well.  
 
-What didn't:\
+What didn't:  
 The turn-taking did not work well. There was a lot of difficulty separating the speech into chunks based on who was speaking. I originally wanted the device to always be listening, and only translate the original user's speech and not their conversation partner's, but this proved to be extremely difficult to actually separate. Instead, I implemented a rotary encoder that could be pressed to toggle when the device was listening or not, forcing it to only transcribe certain speech. However, this introduced some awkwardness for actual usage. When the speaker controlled their own unfiltering device, it felt like an awkward movement for them to make in the middle of the conversation, because it felt like they were intentionally trying to playback their unfiltered speech rather than wearing some device that automatically translates all their speech without conscious consent. The latency also made the flow of conversation awkward. The device would often not speak until the other partner had already began talking, and then it didn't seem like the device's speech was an immediate unfiltered correction of the original user's speech. In order to address this, I made a version 2, which instead listens continuously and chunks speech somewhat based on actual speaking turns, upon which either participant can choose to replay an unfiltered version of the last spoken turn. This worked a lot better from a timing perspective, but changed the intention of the device considerably. 
 
 ### What worked well about the controller and what didn't?
-What worked well:\
+What worked well:  
 The form factor. The rotary knob was pretty easy to understand, and having the rotation map to a continous variable such as "unfiltered-ness", especially paired with a progress bar, was easy to interpret. 
 
-What didn't:\
+What didn't:  
 The responsiveness. Half the time the rotary encoder wouldn't actually sense a press, despite there being an audible click. Sometimes it would also not sense the turning. 
 
 
