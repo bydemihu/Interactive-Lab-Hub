@@ -268,11 +268,11 @@ The system should:
 * require participants to speak to it
 
 *Document how the system works.*
-**Version 1\\**
+**Version 1**  
 Pressing the rotary encoder toggles between the "listening" and "not listening" states. While it's listening, it captures speech until there is 0.4 seconds of silence, until which it transcribes the speech based on what it thinks is the emotionally unfiltered, socially unacceptable version of what the user was truly trying to express. In this version, the user themselves presses the rotary encoded to unfilter their own speech, effectively **outsourcing to an external device the communication of difficult things they truly feel but can't/shouldn't express.** 
 
-**Version 2\\**
-The device is always listening. It continously captures and separates speech into chunks based on the 0.4s silence threshold, but only keeps the last one or two. When the rotary encoder is pressed, it "unfilters" the very last speech chunk. Any participant can press the rotary encoder to "unfilter" a piece of speech, so in this version it acts as a **neutral intent decoder for when you doubt your conversational partner is being totally honest with you.**  
+**Version 2**  
+The device is always listening. It continously captures and separates speech into chunks based on the 0.4s silence threshold, but only keeps the last one or two. When the rotary encoder is pressed, it "unfilters" the very last speech chunk. Any participant can press the rotary encoder to "unfilter" a piece of speech, so in this version it acts as a **neutral intent decoder for when you doubt your conversational partner is being totally honest with you.**    
 
 In both versions:  
 Turning the rotary encoder clockwise increases the "unfiltered-ness", which determines how much the device interprets the speech at face value vs reads deeply into it and makes exaggerated assumptions about intent.  
@@ -281,9 +281,8 @@ The LLM prompt states that it should **translate the input into what the user wo
 
 
 
-*Include videos or screencaptures of both the system and the controller.*
-<img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/4413aac7-8635-457b-a383-cc4bf0a3a6aa" />
 
+<img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/4413aac7-8635-457b-a383-cc4bf0a3a6aa" />
 
 Version 1 (speaker controls unfiltering device): [https://youtu.be/cdcvRo6nexY]  
 Version 2 (unfiltering device is neutral and any party can invoke it): [https://youtu.be/_J7QpAYIBFU]
@@ -308,14 +307,14 @@ What worked well:
 The form factor. The rotary knob was pretty easy to understand, and having the rotation map to a continous variable such as "unfiltered-ness", especially paired with a progress bar, was easy to interpret. 
 
 What didn't:  
-The responsiveness. Half the time the rotary encoder wouldn't actually sense a press, despite there being an audible click. Sometimes it would also not sense the turning. 
+The responsiveness. Half the time the rotary encoder wouldn't actually sense a press, despite there being an audible click. Sometimes it would also not sense the turning. It was also a very obvious interaction, which didn't work well for Version 1 where the act of making the device output the unfiltered speech started to look like an intentional act on the speaker's behalf, rather than a subtle, always-on functionality.
 
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
-\*\**your answer here*\*\*
+In the future, an autonomous version of the system would always be listening and it would be able to determine not only who is saying what, but **which speech necessitates an unfiltered revision in the first place**. Not every speech is hiding some underlying emotion. Having a system that is able to detect that and then reveal it would make it function better as a sort of "truth serum" conversational accessory.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
-\*\**your answer here*\*\*
+This system could keep a record of previous conversational turns, which would provide important context to what is actually being talked about and which speaker may be feeling which underlying emotions. Right now it's hard to gauge with a single sentence devoid of context. A visual sensing modality like capturing video could also be extremely useful, as a lot of these subtextual emotions are instead expressed though facial expression or body language.
 
 <details>
   <summary><strong>Submission Cleanup Reminder (Click to Expand)</strong></summary>
