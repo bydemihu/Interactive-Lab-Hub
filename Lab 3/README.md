@@ -259,12 +259,13 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
    Timing and misunderstanding. The timing is difficult because there often aren't clear breaks of silence between turns, especially in a casual conversation where people may speak over each other. Misunderstandings can also happen when the system doesn't realize the user's intent. To solve this, I give some one-shot message examples in addition to the system prompt, and I constrain it to 5 categories of basic underlying emotions to pick from so its output can be more predictable. 
 2. What are other modes of interaction *beyond speech* that you might also use to clarify how to interact? In particular: how does someone know when the device is listening, and when it is thinking? You have a screen and an LED.
    The screen now pulses from black and grey to signify that it is listening. It also changes color based on the underlying emotion detected, to further convey the unfiltered feeling.
+Feedback from Afroza Aktar:
+- How will the device know whose speech to translate, and who is talking to who? (Addressed by adding a manual input layer to invoke unfiltering rather than having it always-on)
+- How will the device get more context about the conversation instead of just translating one sentence as is? (Addressed by recording many turns of conversation for context, but the rotary encoder press only "translates" the very last recorded speech chunk. Future work: maybe have the owner user first give the device some context about their personality and how they typically feel in various social situations, or implement vision to read body language as well.)
 
 ## Prototype your system
 <img width="1920" height="1080" alt="idd_chatter" src="https://github.com/user-attachments/assets/8a91ebdd-33f0-4757-b317-c8ba0495defb" />
 
-
-*Document how the system works.*
 **Version 1**  
 Pressing the rotary encoder toggles between the "listening" and "not listening" states. While it's listening, it captures speech until there is 0.4 seconds of silence, until which it transcribes the speech based on what it thinks is the emotionally unfiltered, socially unacceptable version of what the user was truly trying to express. In this version, the user themselves presses the rotary encoded to unfilter their own speech, effectively **outsourcing to an external device the communication of difficult things they truly feel but can't/shouldn't express.** 
 
