@@ -297,16 +297,18 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-What worked well:\\
-The actual transcription process. The model came up with some hilariously unhinged responses. It translated "Let's clean the apartment" to "The apartment is disgusting. Clean it before the dust starts having to pay rent." It often came up with little quips of jokes that added a lot of character to the unfiltered response, and for the most part interpreted the underlying emotion/intention fairly well.\\
+What worked well:\
+The actual transcription process. The model came up with some hilariously unhinged responses. It translated "Let's clean the apartment" to "The apartment is disgusting. Clean it before the dust starts having to pay rent." It often came up with little quips of jokes that added a lot of character to the unfiltered response, and for the most part interpreted the underlying emotion/intention fairly well.\
 
-What didn't:\\
-The turn-taking did not work well. There was a lot of difficulty separating the speech into chunks based on who was speaking. When the speaker controlled their own unfiltering device, they could choose when the device started and stopped listening, but sometimes that was an awkward movement to make in the middle of the conversation. The latency also made the flow of conversation awkward. The device would not 
+What didn't:\
+The turn-taking did not work well. There was a lot of difficulty separating the speech into chunks based on who was speaking. I originally wanted the device to always be listening, and only translate the original user's speech and not their conversation partner's, but this proved to be extremely difficult to actually separate. Instead, I implemented a rotary encoder that could be pressed to toggle when the device was listening or not, forcing it to only transcribe certain speech. However, this introduced some awkwardness for actual usage. When the speaker controlled their own unfiltering device, it felt like an awkward movement for them to make in the middle of the conversation, because it felt like they were intentionally trying to playback their unfiltered speech rather than wearing some device that automatically translates all their speech without conscious consent. The latency also made the flow of conversation awkward. The device would often not speak until the other partner had already began talking, and then it didn't seem like the device's speech was an immediate unfiltered correction of the original user's speech. In order to address this, I made a version 2, which instead listens continuously and chunks speech somewhat based on actual speaking turns, upon which either participant can choose to replay an unfiltered version of the last spoken turn. This worked a lot better from a timing perspective, but changed the intention of the device considerably. 
 
 ### What worked well about the controller and what didn't?
-What worked well:
+What worked well:\
+The form factor. The rotary knob was pretty easy to understand, and having the rotation map to a continous variable such as "unfiltered-ness", especially paired with a progress bar, was easy to interpret. 
 
-What didn't:
+What didn't:\
+The responsiveness. Half the time the rotary encoder wouldn't actually sense a press, despite there being an audible click. Sometimes it would also not sense the turning. 
 
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
