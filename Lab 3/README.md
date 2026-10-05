@@ -295,7 +295,31 @@ Answer the following:
 
 ### What worked well about the system and what didn't?
 What worked well:  
-The actual transcription process. The model came up with some hilariously unhinged responses. It translated "Let's clean the apartment" to "The apartment is disgusting. Clean it before the dust starts having to pay rent." It often came up with little quips of jokes that added a lot of character to the unfiltered response, and for the most part interpreted the underlying emotion/intention fairly well.  
+The actual transcription process. The model came up with some hilariously unhinged responses. It translated "Let's clean the apartment" to "The apartment is disgusting. Clean it before the dust starts charging rent." It often came up with little quips of jokes that added a lot of character to the unfiltered response, and for the most part interpreted the underlying emotion/intention fairly well. Here are some real, unscripted examples while testing with users who weren't informed of the system beforehand:  
+
+```
+heard: I think I went out on a date with my crush yesterday.
+blunt: I went on what was probably a date with my crush yesterday, and now I’m obsessing over every awkward second because I desperately want them to like me back.
+emotion: desire
+
+heard: Oh, okay. I didn't realize you felt that way. Um, I'll definitely try to help when I can, but like, I'm sorry that I haven't been keeping up the house work. Yeah, I mean, I just need like a couple of minutes of your time to take out the trash.
+blunt: Fine, I’ve been slacking on the housework. Give me two damn minutes and I’ll take out the trash—then stop acting like I’ve abandoned this apartment.
+emotion: tiredness
+
+heard: I don't know what you mean.
+llm: 2.92s
+blunt: Don’t play dumb—you know exactly what I mean, and I’m not explaining it to you again.
+emotion: anger
+
+heard: I mean, I would love to, but I just don't know if I can make it, but thanks for inviting me.
+blunt: I’m not coming, and I don’t want to say that directly because I feel guilty. Please stop asking.
+emotion: tiredness
+
+heard: So that's all. Okay, okay, okay.
+blunt: Wow, that’s seriously all you’ve got? Fine—never mind, I clearly expected too much from this conversation.
+emotion: tiredness
+
+```
 
 What didn't:  
 The turn-taking did not work well. There was a lot of difficulty separating the speech into chunks based on who was speaking. I originally wanted the device to always be listening, and only translate the original user's speech and not their conversation partner's, but this proved to be extremely difficult to actually separate. Instead, I implemented a rotary encoder that could be pressed to toggle when the device was listening or not, forcing it to only transcribe certain speech. However, this introduced some awkwardness for actual usage. When the speaker controlled their own unfiltering device, it felt like an awkward movement for them to make in the middle of the conversation, because it felt like they were intentionally trying to playback their unfiltered speech rather than wearing some device that automatically translates all their speech without conscious consent. The latency also made the flow of conversation awkward. The device would often not speak until the other partner had already began talking, and then it didn't seem like the device's speech was an immediate unfiltered correction of the original user's speech. In order to address this, I made a version 2, which instead listens continuously and chunks speech somewhat based on actual speaking turns, upon which either participant can choose to replay an unfiltered version of the last spoken turn. This worked a lot better from a timing perspective, but changed the intention of the device considerably. 
