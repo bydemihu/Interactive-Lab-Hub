@@ -1,3 +1,5 @@
+
+
 # Chatterboxes
 
 **Demi Hu**
@@ -105,26 +107,31 @@ The transcript is not the interesting output here — the timings are. Run it ag
 Available sizes, smallest first: `tiny.en`, `base.en`, `small.en`, `medium.en`. The `.en` variants are English-only and faster than their multilingual counterparts at the same size.
 
 \*\***Record a few seconds of your own speech (`arecord -d 5 -f cd -c 1 -r 16000 test.wav`) and transcribe it with at least two model sizes. Report the real-time factor for each. At what point does the accuracy improvement stop being worth the delay, for a system that has to answer you?**\*\*
+
+The real-time factor for the base size is 0.27x, while the real-time factor for the small model size is 0.82x. I tested with both 5 seconds of my speech and 10 seconds. The two models transcribed my speech the same way at both sizes, indicating no clear differences in accuracy, though I also did not say anything particularly complex. I think there were more noticeable differences in transcription time. When I recorded 10 seconds of speech, the small model took noticeably longer than the base model to transcribe (at 5 seconds, transcription took 2.5 and 5.3 seconds, for base and small respectively). I think when the system needs to record more than 10 seconds of speech, the accuracy improvement is no longer worth the delay, because the lag starts feeling like an error rather than a natural time spent waiting for a response. 
+
 ```(.venv) pi@demipi:~/Interactive-Lab-Hub/Lab 3/speech-scripts $ python transcribe.py test.wav --model base.en
 
-I'm recording a test audio for transcription.
+Hello, I am speaking and testing a new transcription. My name is Demi. Hello, hi, hello, hello, hello.
 
 model            base.en (int8, beam=1)
-audio duration   5.00s
-model load       0.73s
-transcription    2.03s
-real-time factor 0.41x
+audio duration   10.00s
+model load       2.75s
+transcription    2.71s
+real-time factor 0.27x
 
 (Model load is a one-time cost per process. In an interactive system you load once and keep the model resident  which is what listen.py does.)
+(.venv) pi@demipi:~/Interactive-Lab-Hub/Lab 3/speech-scripts $ arecord -d 10 -f cd -c 1 -r 16000 test.wav
+Recording WAVE 'test.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
 (.venv) pi@demipi:~/Interactive-Lab-Hub/Lab 3/speech-scripts $ python transcribe.py test.wav --model small.en
 
-Hi, I'm recording a test audio for transcription.
+Hello, I am speaking and testing a new transcription. My name is Demi. Hello, hi, hello, hello, hello.
 
 model            small.en (int8, beam=1)
-audio duration   5.00s
-model load       34.74s
-transcription    5.53s
-real-time factor 1.11x
+audio duration   10.00s
+model load       6.48s
+transcription    8.22s
+real-time factor 0.82x
 
 (Model load is a one-time cost per process. In an interactive system you load once and keep the model resident  which is what listen.py does.)
 ```
@@ -134,6 +141,19 @@ real-time factor 1.11x
 
 
 \*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* Numbers are a good stress test — transcription systems make characteristic errors on digit strings, and you will want to know what they are before you design around them.
+Saved as numerical_input.sh.
+```
+Respondent's answer:
+
+3.141592653
+
+model            tiny.en (int8, beam=1)
+audio duration   5.00s
+model load       0.66s
+transcription    0.96s
+real-time factor 0.19x
+```
+I was surprised that the transcription was surprisingly context-aware. The script asks for digits of pi. I verbally said "three point one", and the system was able to interpret that as a decimal point instead of literally the word "point".
 
 ## C. Turn-taking: knowing when someone has stopped talking
 
@@ -145,6 +165,13 @@ We use a **voice activity detector** (VAD) to segment the microphone stream into
 (.venv) $ cd speech-scripts
 (.venv) $ python listen.py
 ```
+```[2.0s speech, 1.03s to transcribe]  I mean I guess it's not bad. This is...
+[2.3s speech, 0.95s to transcribe]  approximately like how I would.
+[1.7s speech, 0.87s to transcribe]  talk in real life maybe?
+[22.7s speech, 2.70s to transcribe]  If I'm rambling then everything gets counted as one sentence, because one thought flows into the other, like it's a stream of consciousness. Like if I'm talking about my favorite novel or my theories for it, or I have some ideas that I want to share, but if I'm pausing in between a thought and I'm not just like continuously rambling, then this threshold separates it into two separate.
+[1.6s speech, 0.83s to transcribe]  out of princess.
+[2.4s speech, 0.82s to transcribe]  I said utterances.
+```
 
 Speak, pause, and watch it transcribe. Now change the endpointing threshold — the amount of silence the system requires before it decides your turn is over:
 
@@ -154,6 +181,9 @@ Speak, pause, and watch it transcribe. Now change the endpointing threshold — 
 ```
 
 \*\***Try both extremes, and something in between. Describe what each one feels like to talk to. Note specifically: at 0.2s, what kinds of normal speech get cut off? At 1.5s, what does the delay make the system seem like?**\*\*
+The 0.2 is rather difficult to talk to if I'm pausing to gather my thoughts when giving a longer, thought-out response. It feels like I have no room for error at all if I want to express more than one idea vs a standard small-talk back and forth. I could see it working well for a system that asks and expects responses to questions such as "how are you?" and "what's your name?" but a system that requires the user to answer something like "tell me about your favorite memory" will need a lot more space to allow users to actually complete their thoughts. I think users (or perhaps me especially), tend to use a little bit of filler such as "um" or "like" during pauses when collecting thoughts, naturally indicating to a receiver that the turn is not over. A system that purely uses a time-based threshold to identify end-of-turn doesn't capture that nuance.
+
+The 1.5 starts to feel sluggish and unresponsive no matter what my answer type is. When I ramble to it, at least it fully captures my sentiment before transcribing, so I'm not at risk of having a sentence cut off in the middle like with the 0.2, but when I give short responses, it starts to feel like an unnecessarily long cutoff to the point of frustration.
 
 There is no correct value. A system that takes drink orders and a system that listens to someone think out loud want very different thresholds, and the right one depends on what your users are doing with their pauses.
 
@@ -170,19 +200,52 @@ There is no correct value. A system that takes drink orders and a system that li
 Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stuck? Make a device that talks for dogs. If that is too stupid, find an application that is better than that.)
 
 \*\***Post your storyboard and diagram here.**\*\*
+Idea: speech device that translates the user's speech into the most unfiltered version of their honest inner thoughts, like a truth serum. It detects when they're being too shy to confess, too polite to criticize, or too scared to push back, and revises their speech on-the-spot.
+<img width="1920" height="1080" alt="Illustration" src="https://github.com/user-attachments/assets/968981b8-3619-4473-8f25-1bc8fc385679" />
+
+Diagram:
+<img width="1190" height="318" alt="image" src="https://github.com/user-attachments/assets/e758ffa5-c82e-4cfa-b3af-385b8a36a201" />
+
+
 
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses.
+
+**Script:**
+
+In this scenario, the mic only detects the user's speech, not the partner's.
+
+Partner: Oh, hey! How's it going?
+
+User: It's going okay, I guess. I'm a little stressed.
+
+(pause 0.3 seconds)
+
+Device: I'm doing horribly. I am so stressed and busy.
+
+Partner: Oh, uh, I didn't realize? Sorry, do you want to talk about it?
+
+User: It's alright, haha, I'm just a little overwhelmed with work right now.
+
+(pause 0.3 seconds)
+
+Device: It's not alright and I do not want to talk about it. I am so sorry for the rudeness and I know you mean well but I need to go right now.
 
 \*\***Please describe and document your process.**\*\*
 
 Your script should include the pauses. Where does your device wait, and for how long? You now know from Part C that this is a parameter you have to choose, not something that happens for free.
 
+I changed the pause from 0.4s default to 0.3s because in this scenario, the partner isn't going to necessarily wait for the device, and they might try to respond directly to the user. This also assumes a more surface-level conversation where the dialogue can be more direct and back-and-forth, rather than long-winded rambling with someone the user is close to (in which case they wouldn't need the anti-filter device, because they would be conversing with someone they can be more honest with.)
+
 ## E. Acting out the dialogue
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing. Please record this interaction (for example, using Zoom's record feature).
+[https://cornell.box.com/s/fy4mtgk98csvx6v1p2nbtepgzyruugh2]
+
+
+
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
-
+This dialogue was slightly different than what I imagined: my partner was taken aback, as I expected, and she did realize the pattern that seemed to be occuring was that I'd say one thing, then say another, more honest response to her initial question. However, because I was using my own voice to represent both my "own voice" and the "device voice", She couldn't quite figure out if I was pretending to be two different people, two personalities in one person, or simply changing my mind and deciding to be more honest or unhinged the second time around. The back-and-forth went pretty smoothly timing-wise, she was able to differentiate between when I was pausing between my "own voice" and the "device voice" and when I was finished with my response and awaiting hers.
 
 ---
 
@@ -193,20 +256,35 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings.
+   Timing and misunderstanding. The timing is difficult because there often aren't clear breaks of silence between turns, especially in a casual conversation where people may speak over each other. Misunderstandings can also happen when the system doesn't realize the user's intent. To solve this, I give some one-shot message examples in addition to the system prompt, and I constrain it to 5 categories of basic underlying emotions to pick from so its output can be more predictable. 
 2. What are other modes of interaction *beyond speech* that you might also use to clarify how to interact? In particular: how does someone know when the device is listening, and when it is thinking? You have a screen and an LED.
-3. Make a new storyboard, diagram and/or script based on these reflections.
-4. (optional) Integrate [input devices](inputs.md) in the system
+   The screen now pulses from black and grey to signify that it is listening. It also changes color based on the underlying emotion detected, to further convey the unfiltered feeling.
 
 ## Prototype your system
+<img width="1920" height="1080" alt="idd_chatter" src="https://github.com/user-attachments/assets/8a91ebdd-33f0-4757-b317-c8ba0495defb" />
 
-The system should:
-* use the Raspberry Pi
-* use one or more sensors
-* require participants to speak to it
 
 *Document how the system works.*
+**Version 1**  
+Pressing the rotary encoder toggles between the "listening" and "not listening" states. While it's listening, it captures speech until there is 0.4 seconds of silence, until which it transcribes the speech based on what it thinks is the emotionally unfiltered, socially unacceptable version of what the user was truly trying to express. In this version, the user themselves presses the rotary encoded to unfilter their own speech, effectively **outsourcing to an external device the communication of difficult things they truly feel but can't/shouldn't express.** 
 
-*Include videos or screencaptures of both the system and the controller.*
+**Version 2**  
+The device is always listening. It continously captures and separates speech into chunks based on the 0.4s silence threshold, but only keeps the last one or two. When the rotary encoder is pressed, it "unfilters" the very last speech chunk. Any participant can press the rotary encoder to "unfilter" a piece of speech, so in this version it acts as a **neutral intent decoder for when you doubt your conversational partner is being totally honest with you.**    
+
+In both versions:  
+Turning the rotary encoder clockwise increases the "unfiltered-ness", which determines how much the device interprets the speech at face value vs reads deeply into it and makes exaggerated assumptions about intent.  
+The screen displays a progress bar that indicates how much unfiltered-ness is applied. The screen pulses from black to grey while it's listening, and turns a different solid color based on the emotion captured. It recognizes the 5 following underlying "socially unacceptable" (or that someone generally would want to suppress in polite conversation) emotions: anger, avoidance, tiredness, jealousy, and desire.  
+The LLM prompt states that it should **translate the input into what the user would say if they had no social filter, taking into account their underlying emotion that they might be hiding.** The LLM is told to return a json containing the text translation, as well as a one-word emotion identifier from the list of five emotions. The text translation is processed with TTS and played via the speaker, and the emotion designation determines the screen color. 
+
+
+
+
+<img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/4413aac7-8635-457b-a383-cc4bf0a3a6aa" />
+
+Version 1 (speaker controls unfiltering device): [https://youtu.be/cdcvRo6nexY]  
+Version 2 (unfiltering device is neutral and any party can invoke it): [https://youtu.be/_J7QpAYIBFU]
+
+
 
 ## Test the system
 
@@ -215,16 +293,25 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+What worked well:  
+The actual transcription process. The model came up with some hilariously unhinged responses. It translated "Let's clean the apartment" to "The apartment is disgusting. Clean it before the dust starts having to pay rent." It often came up with little quips of jokes that added a lot of character to the unfiltered response, and for the most part interpreted the underlying emotion/intention fairly well.  
+
+What didn't:  
+The turn-taking did not work well. There was a lot of difficulty separating the speech into chunks based on who was speaking. I originally wanted the device to always be listening, and only translate the original user's speech and not their conversation partner's, but this proved to be extremely difficult to actually separate. Instead, I implemented a rotary encoder that could be pressed to toggle when the device was listening or not, forcing it to only transcribe certain speech. However, this introduced some awkwardness for actual usage. When the speaker controlled their own unfiltering device, it felt like an awkward movement for them to make in the middle of the conversation, because it felt like they were intentionally trying to playback their unfiltered speech rather than wearing some device that automatically translates all their speech without conscious consent. The latency also made the flow of conversation awkward. The device would often not speak until the other partner had already began talking, and then it didn't seem like the device's speech was an immediate unfiltered correction of the original user's speech. In order to address this, I made a version 2, which instead listens continuously and chunks speech somewhat based on actual speaking turns, upon which either participant can choose to replay an unfiltered version of the last spoken turn. This worked a lot better from a timing perspective, but changed the intention of the device considerably. 
 
 ### What worked well about the controller and what didn't?
-\*\**your answer here*\*\*
+What worked well:  
+The form factor. The rotary knob was pretty easy to understand, and having the rotation map to a continous variable such as "unfiltered-ness", especially paired with a progress bar, was easy to interpret. 
+
+What didn't:  
+The responsiveness. Half the time the rotary encoder wouldn't actually sense a press, despite there being an audible click. Sometimes it would also not sense the turning. It was also a very obvious interaction, which didn't work well for Version 1 where the act of making the device output the unfiltered speech started to look like an intentional act on the speaker's behalf, rather than a subtle, always-on functionality.
+
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
-\*\**your answer here*\*\*
+In the future, an autonomous version of the system would always be listening and it would be able to determine not only who is saying what, but **which speech necessitates an unfiltered revision in the first place**. Not every speech is hiding some underlying emotion. Having a system that is able to detect that and then reveal it would make it function better as a sort of "truth serum" conversational accessory.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
-\*\**your answer here*\*\*
+This system could keep a record of previous conversational turns, which would provide important context to what is actually being talked about and which speaker may be feeling which underlying emotions. Right now it's hard to gauge with a single sentence devoid of context. A visual sensing modality like capturing video could also be extremely useful, as a lot of these subtextual emotions are instead expressed though facial expression or body language.
 
 <details>
   <summary><strong>Submission Cleanup Reminder (Click to Expand)</strong></summary>
