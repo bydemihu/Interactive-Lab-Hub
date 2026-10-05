@@ -256,16 +256,13 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings.
+   Timing and misunderstanding. The timing is difficult because there often aren't clear breaks of silence between turns, especially in a casual conversation where people may speak over each other. Misunderstandings can also happen when the system doesn't realize the user's intent. To solve this, I give some one-shot message examples in addition to the system prompt, and I constrain it to 5 categories of basic underlying emotions to pick from so its output can be more predictable. 
 2. What are other modes of interaction *beyond speech* that you might also use to clarify how to interact? In particular: how does someone know when the device is listening, and when it is thinking? You have a screen and an LED.
-3. Make a new storyboard, diagram and/or script based on these reflections.
-4. (optional) Integrate [input devices](inputs.md) in the system
+   The screen now pulses from black and grey to signify that it is listening. It also changes color based on the underlying emotion detected, to further convey the unfiltered feeling.
 
 ## Prototype your system
+<img width="1920" height="1080" alt="idd_chatter" src="https://github.com/user-attachments/assets/8a91ebdd-33f0-4757-b317-c8ba0495defb" />
 
-The system should:
-* use the Raspberry Pi
-* use one or more sensors
-* require participants to speak to it
 
 *Document how the system works.*
 **Version 1**  
