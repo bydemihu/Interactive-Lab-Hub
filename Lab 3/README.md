@@ -268,8 +268,20 @@ The system should:
 * require participants to speak to it
 
 *Document how the system works.*
+Version 1\\
+Pressing the rotary encoder toggles between the "listening" and "not listening" states. While it's listening, it captures speech until there is 0.4 seconds of silence, until which it transcribes the speech based on what it thinks is the emotionally unfiltered, socially unacceptable version of what the user was truly trying to express. Turning the rotary encoder increases the "unfiltered-ness", which determines how much the device interprets the speech at face value vs reads into it. 
+
+Version 2\\
+
 
 *Include videos or screencaptures of both the system and the controller.*
+<img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/4413aac7-8635-457b-a383-cc4bf0a3a6aa" />
+
+
+Version 1 (speaker controls unfiltering device): [https://youtu.be/cdcvRo6nexY]
+Version 2 (unfiltering device is neutral and any party can invoke it): [https://youtu.be/_J7QpAYIBFU]
+
+
 
 ## Test the system
 
@@ -278,10 +290,17 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+What worked well:\\
+The actual transcription process. The model came up with some hilariously unhinged responses. It translated "Let's clean the apartment" to "The apartment is disgusting. Clean it before the dust starts having to pay rent." It often came up with little quips of jokes that added a lot of character to the unfiltered response, and for the most part interpreted the underlying emotion/intention fairly well.\\
+
+What didn't:\\
+The turn-taking did not work well. There was a lot of difficulty separating the speech into chunks based on who was speaking. When the speaker controlled their own unfiltering device, they could choose when the device started and stopped listening, but sometimes that was an awkward movement to make in the middle of the conversation. The latency also made the flow of conversation awkward. The device would not 
 
 ### What worked well about the controller and what didn't?
-\*\**your answer here*\*\*
+What worked well:
+
+What didn't:
+
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 \*\**your answer here*\*\*
