@@ -268,10 +268,17 @@ The system should:
 * require participants to speak to it
 
 *Document how the system works.*
-Version 1\\
-Pressing the rotary encoder toggles between the "listening" and "not listening" states. While it's listening, it captures speech until there is 0.4 seconds of silence, until which it transcribes the speech based on what it thinks is the emotionally unfiltered, socially unacceptable version of what the user was truly trying to express. Turning the rotary encoder increases the "unfiltered-ness", which determines how much the device interprets the speech at face value vs reads into it. 
+**Version 1\\**
+Pressing the rotary encoder toggles between the "listening" and "not listening" states. While it's listening, it captures speech until there is 0.4 seconds of silence, until which it transcribes the speech based on what it thinks is the emotionally unfiltered, socially unacceptable version of what the user was truly trying to express. In this version, the user themselves presses the rotary encoded to unfilter their own speech, effectively **outsourcing to an external device the communication of difficult things they truly feel but can't/shouldn't express.** 
 
-Version 2\\
+**Version 2\\**
+The device is always listening. It continously captures and separates speech into chunks based on the 0.4s silence threshold, but only keeps the last one or two. When the rotary encoder is pressed, it "unfilters" the very last speech chunk. Any participant can press the rotary encoder to "unfilter" a piece of speech, so in this version it acts as a **neutral intent decoder for when you doubt your conversational partner is being totally honest with you.**\\
+
+In both versions:\\
+Turning the rotary encoder clockwise increases the "unfiltered-ness", which determines how much the device interprets the speech at face value vs reads deeply into it and makes exaggerated assumptions about intent.\\
+The screen displays a progress bar that indicates how much unfiltered-ness is applied. The screen pulses from black to grey while it's listening, and turns a different solid color based on the emotion captured. It recognizes the 5 following underlying "socially unacceptable" (or that someone generally would want to suppress in polite conversation) emotions: anger, avoidance, tiredness, jealousy, and desire. \\
+The LLM prompt states that it should **translate the input into what the user would say if they had no social filter, taking into account their underlying emotion that they might be hiding.** The LLM is told to return a json containing the text translation, as well as a one-word emotion identifier from the list of five emotions. The text translation is processed with TTS and played via the speaker, and the emotion designation determines the screen color. 
+
 
 
 *Include videos or screencaptures of both the system and the controller.*
