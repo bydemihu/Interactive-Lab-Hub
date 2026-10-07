@@ -4,6 +4,7 @@
 
 **Demi Hu**
 
+[![Watch the video](https://user-images.githubusercontent.com/1128669/135009222-111fe522-e6ba-46ad-b6dc-d1633d21129c.png)](https://youtu.be/LZ0VJClIlRI?si=Yy84mcyVYuVV19mn)
 
 
 ## Prep for Part 1: Get the Latest Content and Pick up Additional Parts
