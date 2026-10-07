@@ -1,0 +1,1 @@
+echo "Hello Demi! I am talking to you with festival." | festival --tts
