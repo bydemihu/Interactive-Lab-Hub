@@ -301,6 +301,7 @@ We prototyped a combination between the flower and the placement design. We used
 Build a cardboard or other low-fidelity physical prototype of your design.
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
+[placemat prototype](https://youtu.be/Era5IMioPxQ)
 <img width="1080" height="810" alt="image" src="https://github.com/user-attachments/assets/f1afe94d-8a4a-48e1-b7fe-7c89ef2b4d82" />
 <img width="1080" height="810" alt="image" src="https://github.com/user-attachments/assets/32d0f3c5-27e8-4eca-b3e2-02031ce1685b" />
 <img width="1080" height="810" alt="image" src="https://github.com/user-attachments/assets/09126400-1e56-4fee-8e45-b10c00c34bd0" />
