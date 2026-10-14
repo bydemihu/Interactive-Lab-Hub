@@ -285,17 +285,28 @@ As you develop your Feast Automata concept, consider where the sensor and actuat
 
 **\*\*\*Draw 5 sketches that explore different physical arrangements for your sensing and actuation.\*\*\***
 <img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/14e661c3-17a9-4186-97da-3b08819c6e36" />
+<img width="1460" height="1042" alt="image" src="https://github.com/user-attachments/assets/e6fd5f62-5d8c-4652-8afb-8104d7c55c18" />
+<img width="1600" height="899" alt="image" src="https://github.com/user-attachments/assets/6bc3cda8-6838-4b25-b59d-b0850c7a087c" />
+<img width="3053" height="2160" alt="image" src="https://github.com/user-attachments/assets/2afcb67b-a076-4ead-927d-6ced5b3b53ce" />
+
 
 
 **\*\*\*What questions do these sketches raise? What do you need to physically prototype to answer them?\*\*\***
+How will we connect multiple of the same sensor (eg. distance) for each utensil and handle conflicting addresses? Do we need one sensor per utensil? How will we design the state machine for which stage of dinner the user is at (what determines an error that is subsequently fixed, vs an actual mistake in what utensils are used? Is there an outside timer-based state that determines which course of dinner it is?) These will need to be prototyped in hardware, not cardboard. 
 
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
-We prototyped a combination between the flower and the placement design. We used the placemat as the input, because it's more natural to the act of eating (instead of a camera/computer vision setup, the simple act of picking up and putting down utensils on the sensors will suffice as input for what stage of dinner the user is at). We kept the flower as the reactor or output to the placement's input. 
+We prototyped a combination between the flower and the placement design. We used the placemat as the input, because it's more natural to the act of eating (instead of a camera/computer vision setup, the simple act of picking up and putting down utensils on the sensors will suffice as input for what stage of dinner the user is at). We kept the flower as the reactor or output to the placement's input. We liked the idea of a satirical take on fine dining etiquette, but we didn't want it to be just a dining guide, we also liked the idea of a physically actuated output that responds to the user's ettiquette.
 
 
 Build a cardboard or other low-fidelity physical prototype of your design.
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
+<img width="1080" height="810" alt="image" src="https://github.com/user-attachments/assets/f1afe94d-8a4a-48e1-b7fe-7c89ef2b4d82" />
+<img width="1080" height="810" alt="image" src="https://github.com/user-attachments/assets/32d0f3c5-27e8-4eca-b3e2-02031ce1685b" />
+<img width="1080" height="810" alt="image" src="https://github.com/user-attachments/assets/09126400-1e56-4fee-8e45-b10c00c34bd0" />
+<img width="1080" height="810" alt="image" src="https://github.com/user-attachments/assets/032d4be8-ae7c-4250-be72-b74d9ee57b2e" />
+
+
 
 ---
 
