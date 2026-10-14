@@ -18,7 +18,7 @@
 
 ## Lab Overview
 Team: <canvas group name>  
-Members: Full Name (netid, github-handle), ...  
+Members: Demi Hu, Aurora Shen, Jianing Li, Regina 
 Project name: <name>
 
 
@@ -284,10 +284,14 @@ Your kit includes these [SparkFun Qwiic OLED screens](https://www.sparkfun.com/p
 As you develop your Feast Automata concept, consider where the sensor and actuator need to be placed, what parts move, how electronics are housed, and how the overall form and aesthetics support the interaction.
 
 **\*\*\*Draw 5 sketches that explore different physical arrangements for your sensing and actuation.\*\*\***
+<img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/14e661c3-17a9-4186-97da-3b08819c6e36" />
+
 
 **\*\*\*What questions do these sketches raise? What do you need to physically prototype to answer them?\*\*\***
 
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
+We prototyped a combination between the flower and the placement design. We used the placemat as the input, because it's more natural to the act of eating (instead of a camera/computer vision setup, the simple act of picking up and putting down utensils on the sensors will suffice as input for what stage of dinner the user is at). We kept the flower as the reactor or output to the placement's input. 
+
 
 Build a cardboard or other low-fidelity physical prototype of your design.
 
