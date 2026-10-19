@@ -531,12 +531,12 @@ Etiquette Bouquet is an exploration of European and American fine dining etiquet
 
 **Acts Like:** The user progresses through a multi-course fine dining experience. They must figure out what utensils are appropriate to use when. The server presses a button on the placemat every time a new course is served, indicating the next "state" of dinner. The user watches the flower's movements and listens to the ambient sounds as they eat to deduce whether they are following etiquette correctly, potentially saving them awkwardness in front of their posh, refined company.\
 
-**Materials**\
-Software:\
-* [`etiquette.py`](etiquette.py) runs the main gain logic, handling dinner course state, receiving dinner course state increment via qwiic button, and checking the picked up/put down states of each utensil via proximity sensors, then sending correct/incorrect signals based on utensil state and dinner state comparison. \
-* [`flower.py`](flower.py) is called by etiquette.py with the correct/incorrect signal as input, and runs the corresponding motor movement pattern and sound file.\
+**Materials**
+Software:
+* [`etiquette.py`](etiquette.py) runs the main gain logic, handling dinner course state, receiving dinner course state increment via qwiic button, and checking the picked up/put down states of each utensil via proximity sensors, then sending correct/incorrect signals based on utensil state and dinner state comparison.
+* [`flower.py`](flower.py) is called by etiquette.py with the correct/incorrect signal as input, and runs the corresponding motor movement pattern and sound file.
   
-Hardware:\
+Hardware:
 * 3 VCNL4040 proximity sensors
 * 2 APDS-9960 proximity sensors
 * Qwiic TCA9548A I²C multiplexer (Each of the above sensors of the same type share the same I2C address and cannot be digitally/physically readdressed, requiring the use of a multiplexer)
@@ -544,7 +544,7 @@ Hardware:\
 * Servo Motor + pHAT
 * Raspberry Pi 5
 
-Accessories:\
+Accessories:
 * Fiber acoustic panel placemat (Enough thickness to house proximity sensors beneath or flush with surface)
 * Real dinnerware (appetizer fork and knife, entree fork and knife, soup spoon, plate, soup cup, arranged for formal dining)
 * Laser-cut acrylic flower
@@ -553,7 +553,9 @@ Accessories:\
 **Diagram**\
 
 **Final Video and Photos**\
+
 **(Etiquette Bouquet Final Video)[https://youtu.be/_fNJDwrxEUk]**
+
 <img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/13dd1448-dc88-428c-822a-a30f4884e10b" />
 <img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/74533df1-094d-43ce-acf7-de43d593521e" />
 <img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/9e388554-5e48-43e1-91a7-ddf827721fef" />
