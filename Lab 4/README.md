@@ -536,8 +536,19 @@ Software:\
 * [`etiquette.py`](etiquette.py) runs the main gain logic, handling dinner course state, receiving dinner course state increment via qwiic button, and checking the picked up/put down states of each utensil via proximity sensors, then sending correct/incorrect signals based on utensil state and dinner state comparison. \
 * [`flower.py`](flower.py) is called by etiquette.py with the correct/incorrect signal as input, and runs the corresponding motor movement pattern and sound file.\
   
-Hardware: 5 proximity sensors and a qwiic button connected via I2C multiplexer, speaker, and servo motor (via pihat). Raspberry Pi 5. \
-Accessories: Felt placemat, 5 real utensils and plate arranged for formal dining, felt prototypes of food. Laser-cut acrylic flower, laser-cut wooden box to house hardware components.\
+Hardware:\
+* 3 VCNL4040 proximity sensors
+* 2 APDS-9960 proximity sensors
+* Qwiic TCA9548A I²C multiplexer (Each of the above sensors of the same type share the same I2C address and cannot be digitally/physically readdressed, requiring the use of a multiplexer)
+* Qwiic button RED
+* Servo Motor + pHAT
+* Raspberry Pi 5
+
+Accessories:\
+* Fiber acoustic panel placemat (Enough thickness to house proximity sensors beneath or flush with surface)
+* Real dinnerware (appetizer fork and knife, entree fork and knife, soup spoon, plate, soup cup, arranged for formal dining)
+* Laser-cut acrylic flower
+* Laser-cut wooden flower base (also houses hardware components)
 
 **Diagram**\
 
@@ -548,9 +559,17 @@ Accessories: Felt placemat, 5 real utensils and plate arranged for formal dining
 <img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/9e388554-5e48-43e1-91a7-ddf827721fef" />
 <img width="2055" height="1206" alt="image" src="https://github.com/user-attachments/assets/4ded9ff9-3bcf-4311-b8e7-06ad4fec77af" />
 
+## Reflection
+**Iteration**\
+After part 1, we had fully prototyped the interaction with wizard-of-oz interaction, but had not yet implemented the electronics. We originally planned to use a capacitative touch sensor, running copper tape from the the resting place of each utensil to each slot on the capacitative touch sensor, but we ran into a problem while user testing. The capacitative touch sensor could only detect when the user was **actively touching the utensil AND the utensil was touching the copper trace**, therefore impossible to distinguish between when the utensil was resting on the placemat with no input and when the user was using the utensil with no contact to the placemat. There were two approaches we tried to make this sensor configuration work: 1. software: trying to code a toggle state so that we treated subsequent capcitative touch as "picked up" vs "put down", but then we encountered noisiness and duplicate touches, and 2. hardware: wiring the user's body to the sensor as well so that only the presence/absence of the utensil on the placemat could "close" the circuit. \
+In the end, neither approach was robust, so we switched to using distance/proximity sensors that could more consistently detect whether a utensil was in its place. We encountered a new address conflict issue, and we resolved this by using a multiplexer. We also encountered a threshold issue: the two types of proximity sensors output a drastically different range of raw values for the range of utensil distances we were working with. We resolved this by using a different threshold per sensor type, and spent time manually testing and configuring the threshold to ensure it could appropriately distinguish between the utensil being on or off the placemat.\
+
+**Interaction**\
+We realized the accessories and setup made a significant difference in understanding the context of the interaction. Because our interaction was meant to be more subtle, as relatively inconspicuous feedback to the user on their etiquette performance, we realized our interaction video might not be immediately understandable. So instead, we played out an elaborate multi-course dinner, complete with waiters and fake food, ensuring viewers could understand the logic that the course type directly affected which utensils should or shouldn't be used, and how the flower responded to user errors and subsequently correct user behavior.\
+Balancing the subtlety of the interaction was difficult. On one hand, we considered creating a satirical take on fine dining by implementing a super loud and obnoxious feedback mechanism that would effectively proclaim to the whole table, "Hey, look at this peasant who doesn't know how formal dinner works!", and on the other hand we considered creating a more helpful dining companion that could guide the user through a foreign dining ritual that they are unfamiliar with but needs to navigate it gracefully for professional reasons.\
+
 **Working Process Documentation Archive**\
-https://github.com/user-attachments/assets/c31b0bc7-fd3b-437e-96d4-d60a2758ab6c
-https://github.com/user-attachments/assets/bbb19290-e41f-4b37-aa5d-2c5431b2fe3a
+(flower test) [https://github.com/user-attachments/assets/c31b0bc7-fd3b-437e-96d4-d60a2758ab6c]
 <img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/8e84474e-f60f-4f37-a1d2-6549f8cf9191" />
 
 
