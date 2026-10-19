@@ -355,8 +355,7 @@ See encoder_accel_servo_dashboard.py in the Lab 4 folder for an optional example
 
 <details>
 	<summary><strong>Windmill Coaster and Extensions (Click to Expand)</strong></summary>
-
-#### Example Application: Windmill Coaster
+	#### Example Application: Windmill Coaster
 
 Now that you have explored both sensing and actuation, here is a simple example that combines the two.
 
@@ -499,12 +498,6 @@ python gpio_expander.py
 
 This is a playful way to visualize how the expander works, but the same technique applies if you wanted to prototype buttons, switches, or other interaction elements. It’s a lightweight, flexible addition to your prototyping toolkit.
 
----
-
-
----
-
----
 <\details>
 
 ### Part F
