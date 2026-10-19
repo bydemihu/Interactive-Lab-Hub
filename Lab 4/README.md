@@ -19,7 +19,7 @@
 ## Lab Overview
 Team: <canvas group name>  
 Members: Demi Hu(dh785), Jianing Li(jl4837), Aurora Shen(js3996), Regina Chang(tc845)
-Project name: <Etiquette Bouquet>
+Project name: Etiquette Bouquet
 
 
 For lab this week, we focus on both sensing and actuation, bringing new modes of input and output into your devices, while also prototyping the physical structure and overall look of the device. You will consider how the physical form supports sensing and actuation, and how these elements come together to shape the interaction and aesthetics of the device.
