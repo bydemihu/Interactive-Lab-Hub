@@ -523,21 +523,32 @@ For submission, the readme.md page for this lab should be edited to include the 
 * Labs are due on Mondays, make sure to submit your Lab 4 readme.md to Canvas.
 
 # Etiquette Bouquet
-Etiquette Bouquet is an exploration of European and American fine dining etiquette traditions. We take a playful, slightly satirical approach towards the rigid prescriptivism of a fine dining ritual. As students who come from cultures where meals focus on community and rarely on performance, we aim to show a different perspective of how unnatural fine dining etiquette can sometimes feel.\\
+Etiquette Bouquet is an exploration of European and American fine dining etiquette traditions. We take a playful, slightly satirical approach towards the rigid prescriptivism of a fine dining ritual. As students who come from cultures where meals focus on community and rarely on performance, we aim to show a different perspective of how unnatural fine dining etiquette can sometimes feel.\
 
-**Looks Like:** The device consists of a placemat input device and a flower output device. The placemat contains a typical fine dining layout of various plates and utensils. The flower takes the form of a standing tabletop decoration.\\
+**Looks Like:** The device consists of a placemat input device and a flower output device. The placemat contains a typical fine dining layout of various plates and utensils. The flower takes the form of a standing tabletop decoration.\
 
-**Works Like:** Proximity sensors beneath each utensil on the placemat detect whether a utensil is resting in place or actively in use by the user. The flower, while fixed to one location like a standard table decoration, can spin to indicate to the user whether they are correctly following the etiquette based on the current dining course as set by a state machine. When the user makes a faux pax, a servo motor shakes the flower frantically and a speaker plays a discordant noise, whereas when the dinner is progressing without error, the motor spins the flower gently and the speaker plays some refined classical music.\\
+**Works Like:** Proximity sensors beneath each utensil on the placemat detect whether a utensil is resting in place or actively in use by the user. The flower, while fixed to one location like a standard table decoration, can spin to indicate to the user whether they are correctly following the etiquette based on the current dining course as set by a state machine. When the user makes a faux pax, a servo motor shakes the flower frantically and a speaker plays a discordant noise, whereas when the dinner is progressing without error, the motor spins the flower gently and the speaker plays some refined classical music.\
 
-**Acts Like:** The user progresses through a multi-course fine dining experience. They must figure out what utensils are appropriate to use when. The server presses a button on the placemat every time a new course is served, indicating the next "state" of dinner. The user watches the flower's movements and listens to the ambient sounds as they eat to deduce whether they are following etiquette correctly, potentially saving them awkwardness in front of their posh, refined company.\\
+**Acts Like:** The user progresses through a multi-course fine dining experience. They must figure out what utensils are appropriate to use when. The server presses a button on the placemat every time a new course is served, indicating the next "state" of dinner. The user watches the flower's movements and listens to the ambient sounds as they eat to deduce whether they are following etiquette correctly, potentially saving them awkwardness in front of their posh, refined company.\
 
-**Materials**\\
-Software: etiquette.py (main game logic), flower.py (runs flower motor and sound output)\\
-Hardware: 5 proximity sensors and a qwiic button connected via I2C multiplexer, speaker, and servo motor. \\
-Accessories: Placemat, 5 utensils and plate arranged for formal dining, felt prototypes of soup/salad/steak. Laser-cut acrylic flower, laser-cut wooden box to house hardware components.\\
+**Materials**\
+Software:\
+* [`etiquette.py`](etiquette.py) runs the main gain logic, handling dinner course state, receiving dinner course state increment via qwiic button, and checking the picked up/put down states of each utensil via proximity sensors, then sending correct/incorrect signals based on utensil state and dinner state comparison. \
+* [`flower.py`](flower.py) is called by etiquette.py with the correct/incorrect signal as input, and runs the corresponding motor movement pattern and sound file.\
+  
+Hardware: 5 proximity sensors and a qwiic button connected via I2C multiplexer, speaker, and servo motor (via pihat). Raspberry Pi 5. \
+Accessories: Felt placemat, 5 real utensils and plate arranged for formal dining, felt prototypes of food. Laser-cut acrylic flower, laser-cut wooden box to house hardware components.\
 
-**Diagram**\\
+**Diagram**\
 
-**Final Video and Photos**\\
+**Final Video and Photos**\
+**(Etiquette Bouquet Final Video)[https://youtu.be/_fNJDwrxEUk]**
+<img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/13dd1448-dc88-428c-822a-a30f4884e10b" />
+<img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/74533df1-094d-43ce-acf7-de43d593521e" />
+<img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/9e388554-5e48-43e1-91a7-ddf827721fef" />
 
-**Working Photos**\\
+**Working Process Documentation**\
+https://github.com/user-attachments/assets/c31b0bc7-fd3b-437e-96d4-d60a2758ab6c
+<img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/8e84474e-f60f-4f37-a1d2-6549f8cf9191" />
+
+
