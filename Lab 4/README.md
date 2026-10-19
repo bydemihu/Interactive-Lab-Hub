@@ -42,7 +42,10 @@ F) [Final Documentation](#part-f)
 
 ---
 
-## Part 1 Lab Preparation
+<details>
+	<summary><strong>Part 1 Instructions</strong></summary>
+
+	## Part 1 Lab Preparation
 
 ---
 
@@ -251,6 +254,9 @@ For more details and advanced usage, see the [official SparkFun Servo pHAT docum
 A servo motor is a rotary actuator that allows for precise control of angular position. The position is set by the width of an electrical pulse (PWM). You can read [this Adafruit guide](https://learn.adafruit.com/adafruit-arduino-lesson-14-servo-motors/servo-motors) to learn more about how servos work.
 
 ---
+</details>
+
+
 
 ### Part D
 ### Physical Interaction Design: Feast Automata
