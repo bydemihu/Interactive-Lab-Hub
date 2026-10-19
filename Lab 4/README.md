@@ -18,8 +18,8 @@
 
 ## Lab Overview
 Team: <canvas group name>  
-Members: Demi Hu, Aurora Shen, Jianing Li, Regina 
-Project name: <name>
+Members: Demi Hu(dh785), Jianing Li(jl4837), Aurora Shen(js3996), Regina Chang(tc845)
+Project name: <Etiquette Bouquet>
 
 
 For lab this week, we focus on both sensing and actuation, bringing new modes of input and output into your devices, while also prototyping the physical structure and overall look of the device. You will consider how the physical form supports sensing and actuation, and how these elements come together to shape the interaction and aesthetics of the device.
@@ -353,6 +353,9 @@ See encoder_accel_servo_dashboard.py in the Lab 4 folder for an optional example
 
 **`Lab 4/encoder_accel_servo_dashboard.py`**
 
+<details>
+	<summary><strong>Windmill Coaster and Extensions (Click to Expand)</strong></summary>
+
 #### Example Application: Windmill Coaster
 
 Now that you have explored both sensing and actuation, here is a simple example that combines the two.
@@ -502,6 +505,7 @@ This is a playful way to visualize how the expander works, but the same techniqu
 ---
 
 ---
+<\details>
 
 ### Part F
 
@@ -525,3 +529,23 @@ For submission, the readme.md page for this lab should be edited to include the 
 * Upload any materials that explain what you did, into your lab 4 repository, and link them in your lab 4 readme.md.
 * Link your Lab 4 readme.md in your main Interactive-Lab-Hub readme.md. 
 * Labs are due on Mondays, make sure to submit your Lab 4 readme.md to Canvas.
+
+# Etiquette Bouquet
+Etiquette Bouquet is an exploration of European and American fine dining etiquette traditions. We take a playful, slightly satirical approach towards the rigid prescriptivism of a fine dining ritual. As students who come from cultures where meals focus on community and rarely on performance, we aim to show a different perspective of how unnatural fine dining etiquette can sometimes feel.\\
+
+**Looks Like:** The device consists of a placemat input device and a flower output device. The placemat contains a typical fine dining layout of various plates and utensils. The flower takes the form of a standing tabletop decoration.\\
+
+**Works Like:** Proximity sensors beneath each utensil on the placemat detect whether a utensil is resting in place or actively in use by the user. The flower, while fixed to one location like a standard table decoration, can spin to indicate to the user whether they are correctly following the etiquette based on the current dining course as set by a state machine. When the user makes a faux pax, a servo motor shakes the flower frantically and a speaker plays a discordant noise, whereas when the dinner is progressing without error, the motor spins the flower gently and the speaker plays some refined classical music.\\
+
+**Acts Like:** The user progresses through a multi-course fine dining experience. They must figure out what utensils are appropriate to use when. The server presses a button on the placemat every time a new course is served, indicating the next "state" of dinner. The user watches the flower's movements and listens to the ambient sounds as they eat to deduce whether they are following etiquette correctly, potentially saving them awkwardness in front of their posh, refined company.\\
+
+**Materials**\\
+Software: etiquette.py (main game logic), flower.py (runs flower motor and sound output)\\
+Hardware: 5 proximity sensors and a qwiic button connected via I2C multiplexer, speaker, and servo motor. \\
+Accessories: Placemat, 5 utensils and plate arranged for formal dining, felt prototypes of soup/salad/steak. Laser-cut acrylic flower, laser-cut wooden box to house hardware components.\\
+
+**Diagram**\\
+
+**Final Video and Photos**\\
+
+**Working Photos**\\
