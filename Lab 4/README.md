@@ -551,6 +551,7 @@ Accessories:
 * Laser-cut wooden flower base (also houses hardware components)
 
 **Diagram**\
+<img width="1920" height="1080" alt="User picks up spoon" src="https://github.com/user-attachments/assets/7b67a388-63af-4996-a6aa-c2ba47ba28bb" />
 
 **Final Video and Photos**\
 
