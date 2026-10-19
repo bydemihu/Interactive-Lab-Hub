@@ -356,8 +356,7 @@ See encoder_accel_servo_dashboard.py in the Lab 4 folder for an optional example
 <details>
 	<summary><strong>Windmill Coaster and Extensions (Click to Expand)</strong></summary>
 	#### Example Application: Windmill Coaster
-
-Now that you have explored both sensing and actuation, here is a simple example that combines the two.
+	Now that you have explored both sensing and actuation, here is a simple example that combines the two.
 
 The **Windmill Coaster** uses a Qwiic distance/proximity sensor to detect when a cup is placed on a coaster. When the cup is detected, a servo motor animates a small windmill by sweeping it back and forth, turning an ordinary action during drinking into a playful physical interaction.
 
@@ -497,6 +496,7 @@ python gpio_expander.py
 ```
 
 This is a playful way to visualize how the expander works, but the same technique applies if you wanted to prototype buttons, switches, or other interaction elements. It’s a lightweight, flexible addition to your prototyping toolkit.
+
 
 <\details>
 
