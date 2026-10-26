@@ -142,7 +142,7 @@ Then press q to quit and run it again with a flag. Each one changes a single thi
 ```
 
 \*\*\***Include a short video or screenshots of the person detection.**\*\*\*
-
+[https://youtu.be/j8Xl5l19yz4]
 
 ## Part C. 
 ### See more: hands and pose with MediaPipe
@@ -169,6 +169,12 @@ Try the two main features of this script: 1) pinching for percentage control (th
 Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.
 
 \*\*\***Include a screenshot or short video of the hand pose demo, and write how you might use face, hand or body pose tracking in your observant system.**\*\*\*
+<img width="2880" height="1608" alt="image" src="https://github.com/user-attachments/assets/3b958953-cb7b-4a87-98eb-d1abd4bac446" />
+<img width="2880" height="1606" alt="image" src="https://github.com/user-attachments/assets/00ba0d14-c3c0-448e-9894-9f80c29e1179" />
+
+
+I want to make an overnight kitchen activity detection system, so body pose tracking might be used to determine what users are doing: washing dishes, reaching into fridge, bending up or down to access cabinets, etc. 
+
 
 
 ## Part D. 
@@ -202,8 +208,27 @@ Things in the [Ollama API](https://github.com/ollama/ollama/blob/main/docs/api.m
 A 0.8B model is slow and sometimes wrong. It will invent events that are not in the data and agree with a wrong premise. Give it the data, keep its job narrow, and decide what the device does when the model is unsure.
 
 \*\*\***Ask Qwen three questions to answer. Paste the questions, the answers and how long each took. Try one of them with `qwen3:0.6b` and compare.**\*\*\*
+**QWEN3.5:0.8b**\
 
 <details>
+prompt: tell me about the history of roosevelt island. two sentences\
+response: Roosevelt Island is an undeveloped, narrow isthmus connecting Long Island to Martha's Vineyard during colonial times, a location that served as critical staging ground for naval and civilian explorers who were the first Europeans to see it in 1604.\
+time: approx 40s. \
+correctness: totally off. \
+
+prompt: tell me three things about ut austin.\
+response: 1. The fictional character is created by author Charles Bukowski and serves as the central focus of his famous short story "Waltz on BLue Lake." 2. In real life, Uta Austin was an American model known for her high school appearance and later became a prominent figure in early 20th-century music and jazz culture. 3. She is best remembered for being one of the first Black musicians to perform at New York's Metropolitan Opera during its founding years in the 1920s.\
+time: approx 20s.\
+correctness: totally off again, it doesn't seem to understand at all that UT Austin is a university and not a person. whereas with Roosevelt Island, it at least recognized it as a place, and somewhat geographically related to Long Island. This is likely due to how broad and vague the prompt is.\
+
+prompt: How to cook pasta?
+response: To cook pasta, you generally follow these three essential steps: measure your water, add the dry ingredeints (pasta and broth), and simmer gently. FIrst, place a small amount of boiling salted water in a pot. Drain and rinse your dried pasta under cool running water until it is completely clear. Add the pasta to the boiling water and stir continuously for 1-2 minutes until just slightly al denter (the fork should penetrate with a little resistance). Next, add your cooking liquid, usually a mixture of hot white wine, chicken broth, or vegetable stock. Reduce the heat to low. Once the pasta is fully tender, stir in any remaining dry ingredients like oil, minced garlic, and salt if desired. Cook until it absorbs all the liquid and softens further. You can top your dish with fresh herbs before serving.\
+time: approx 25s.\
+correctness: slightly better, it kept the cadence of a real written recipe. it struggled slightly with persistence (like not keeping track of ingredients, having some strange and contradictory instructions, and some odd steps like rinisng the pasta before cooking, or adding "hot white wine". \
+
+
+
+
   Q&A here
 </details>
 
@@ -239,6 +264,11 @@ asking Qwen...
 Qwen (18.4 s):
 One person came in from the right, moved close to the camera, and left after about half a minute. ...
 ```
+
+
+**Output**\
+There are a total of 10 people recorded across the room. They were all located within the center or right areas of the room during the 60-second observation period. No one was ever seen at the left side of the room. The only significant change occurred when the person at the right/close area disappeared, leaving no one there for a brief moment before returning to their position.\
+Analysis: It did not recognize the other objects like a lightbulb, stuffed animal, banana, or scissors. It was also extremely laggy and did not detect when the person shifted in the camera view quickly, and could not retain persistence between users (says 10 people detected, when it was the same person moving within view of the camera). 
 
 ---
 
