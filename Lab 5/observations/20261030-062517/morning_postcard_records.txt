@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "project": "night-window",
+    "id": "20261030-062517",
+    "started": "2026-10-30T06:25:17",
+    "ended": "2026-10-30T06:25:47",
+    "stopped": "duration",
+    "duration_s": 30.0,
+    "interval_s": 5.0,
+    "camera": 0,
+    "model": "yolo26n_ncnn_model",
+    "imgsz": 320,
+    "conf": 0.4,
+    "all_classes": true,
+    "classes": [],
+    "frame_width": 640,
+    "frame_height": 480,
+    "samples": 6,
+    "detections": 1
+  },
+  "samples": [
+    {
+      "timestamp": "2026-10-30T06:25:17",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.7,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:25:22",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.8,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:25:27",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.7,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:25:32",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.8,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:25:37",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 15.8,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:25:42",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.8,
+      "humidity_percent": 73.0
+    }
+  ],
+  "detections": [
+    {
+      "timestamp": "2026-10-30T06:25:37",
+      "class_name": "traffic light",
+      "class_id": 9,
+      "confidence": 0.4194,
+      "bbox": [
+        417.6,
+        283.4,
+        469.4,
+        326.6
+      ],
+      "position": {
+        "cx": 0.693,
+        "cy": 0.6354,
+        "horizontal": "right",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480,
+      "crop_path": "/tmp/night-window-sinqf49j/20261030-062537-s4-traffic-light-0.png",
+      "mask_path": "/tmp/night-window-sinqf49j/20261030-062537-s4-traffic-light-0-mask.png"
+    }
+  ],
+  "speculations": [
+    {
+      "timestamp": "2026-10-30T06:25:37",
+      "class_name": "traffic light",
+      "text": "The moonlight filtered through the glass of the window, casting a soft, pale glow on the dark interior of the room where I was standing alone.",
+      "model": "qwen3.5:0.8b"
+    }
+  ]
+}

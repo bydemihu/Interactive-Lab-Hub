@@ -1,0 +1,11 @@
+23:48:24 1 person(s) at center/far
+23:48:27 1 person(s) at center/close
+23:48:32 1 person(s) at right/close
+23:48:33 nobody
+23:48:55 1 person(s) at right/close
+23:48:55 nobody
+23:49:15 1 person(s) at right/close
+23:49:15 1 person(s) at center/close
+23:49:17 1 person(s) at left/close
+23:49:17 1 person(s) at center/close
+23:49:18 1 person(s) at left/close

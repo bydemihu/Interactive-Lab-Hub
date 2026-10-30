@@ -1,0 +1,2217 @@
+{
+  "meta": {
+    "project": "night-window",
+    "id": "20261030-062938",
+    "started": "2026-10-30T06:29:38",
+    "ended": "2026-10-30T08:29:38",
+    "stopped": "duration",
+    "duration_s": 7200.0,
+    "interval_s": 30.0,
+    "camera": 0,
+    "model": "yolo26n_ncnn_model",
+    "imgsz": 320,
+    "conf": 0.4,
+    "all_classes": true,
+    "classes": [],
+    "frame_width": 640,
+    "frame_height": 480,
+    "samples": 240,
+    "detections": 22
+  },
+  "samples": [
+    {
+      "timestamp": "2026-10-30T06:29:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.8,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:30:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.8,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:30:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.8,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:31:08",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 15.8,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:31:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.8,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:32:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.8,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:32:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.8,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:33:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.8,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:33:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:34:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:34:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:35:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:35:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:36:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:36:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:37:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:37:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:38:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:38:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:39:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:39:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:40:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:40:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:41:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 73.0
+    },
+    {
+      "timestamp": "2026-10-30T06:41:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:42:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:42:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:43:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:43:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:44:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:44:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:45:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:45:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:46:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:46:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:47:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:47:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:48:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:48:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:49:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:49:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:50:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:50:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:51:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:51:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:52:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:52:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:53:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:53:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:54:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:54:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:55:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:55:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:56:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:56:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:57:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:57:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:58:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:58:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:59:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T06:59:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:00:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:00:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:01:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:01:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:02:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:02:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:03:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:03:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:04:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:04:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:05:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:05:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:06:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:06:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:07:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 15.9,
+      "humidity_percent": 72.0
+    },
+    {
+      "timestamp": "2026-10-30T07:07:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:08:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:08:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:09:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:09:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:10:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:10:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:11:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:11:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:12:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:12:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:13:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:13:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:14:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:14:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:15:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:15:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:16:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:16:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:17:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:17:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:18:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:18:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:19:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:19:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:20:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:20:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:21:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:21:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:22:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:22:38",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:23:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:23:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:24:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 71.0
+    },
+    {
+      "timestamp": "2026-10-30T07:24:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:25:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:25:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:26:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:26:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:27:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:27:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:28:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:28:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:29:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:29:38",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.0,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:30:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:30:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:31:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:31:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:32:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:32:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:33:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:33:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:34:08",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:34:38",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:35:08",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:35:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:36:08",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:36:38",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:37:08",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:37:38",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:38:08",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:38:38",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:39:08",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:39:38",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:40:08",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:40:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:41:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:41:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:42:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:42:38",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:43:08",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:43:38",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:44:08",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:44:38",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:45:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:45:38",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:46:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:46:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:47:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:47:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:48:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:48:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:49:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:49:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:50:08",
+      "detections": 1,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:50:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:51:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.1,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:51:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:52:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:52:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:53:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:53:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:54:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:54:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:55:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:55:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:56:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.2,
+      "humidity_percent": 70.0
+    },
+    {
+      "timestamp": "2026-10-30T07:56:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.3,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T07:57:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.3,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T07:57:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.3,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T07:58:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.3,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T07:58:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T07:59:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T07:59:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:00:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:00:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:01:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:01:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.3,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:02:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.3,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:02:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.3,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:03:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.3,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:03:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.3,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:04:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.3,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:04:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.3,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:05:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.3,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:05:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.3,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:06:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:06:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:07:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:07:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:08:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:08:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:09:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:09:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:10:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:10:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:11:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:11:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:12:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 69.0
+    },
+    {
+      "timestamp": "2026-10-30T08:12:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:13:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:13:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:14:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:14:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:15:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:15:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:16:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:16:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:17:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:17:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:18:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:18:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:19:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.4,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:19:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:20:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:20:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:21:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:21:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:22:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:22:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:23:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:23:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:24:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:24:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:25:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.5,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:25:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.6,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:26:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.6,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:26:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.6,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:27:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.6,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:27:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.6,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:28:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.6,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:28:38",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.6,
+      "humidity_percent": 68.0
+    },
+    {
+      "timestamp": "2026-10-30T08:29:08",
+      "detections": 0,
+      "frame_ok": true,
+      "temperature_c": 16.6,
+      "humidity_percent": 68.0
+    }
+  ],
+  "detections": [
+    {
+      "timestamp": "2026-10-30T06:31:08",
+      "class_name": "traffic light",
+      "class_id": 9,
+      "confidence": 0.4253,
+      "bbox": [
+        440.5,
+        254.0,
+        609.5,
+        330.0
+      ],
+      "position": {
+        "cx": 0.8203,
+        "cy": 0.6083,
+        "horizontal": "right",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480,
+      "crop_path": "/tmp/night-window-1xue3st8/20261030-063108-s3-traffic-light-0.png",
+      "mask_path": "/tmp/night-window-1xue3st8/20261030-063108-s3-traffic-light-0-mask.png"
+    },
+    {
+      "timestamp": "2026-10-30T07:22:38",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4702,
+      "bbox": [
+        0.0,
+        197.8,
+        612.5,
+        244.2
+      ],
+      "position": {
+        "cx": 0.4785,
+        "cy": 0.4604,
+        "horizontal": "center",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480,
+      "crop_path": "/tmp/night-window-1xue3st8/20261030-072238-s106-train-0.png",
+      "mask_path": "/tmp/night-window-1xue3st8/20261030-072238-s106-train-0-mask.png"
+    },
+    {
+      "timestamp": "2026-10-30T07:29:38",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.522,
+      "bbox": [
+        0.0,
+        197.2,
+        601.0,
+        245.8
+      ],
+      "position": {
+        "cx": 0.4695,
+        "cy": 0.4615,
+        "horizontal": "center",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480,
+      "crop_path": "/tmp/night-window-1xue3st8/20261030-072938-s120-train-0.png",
+      "mask_path": "/tmp/night-window-1xue3st8/20261030-072938-s120-train-0-mask.png"
+    },
+    {
+      "timestamp": "2026-10-30T07:34:08",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4287,
+      "bbox": [
+        0.2,
+        206.1,
+        264.5,
+        246.9
+      ],
+      "position": {
+        "cx": 0.2068,
+        "cy": 0.4719,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480
+    },
+    {
+      "timestamp": "2026-10-30T07:34:38",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.5298,
+      "bbox": [
+        0.2,
+        207.0,
+        263.0,
+        247.5
+      ],
+      "position": {
+        "cx": 0.2057,
+        "cy": 0.4734,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480
+    },
+    {
+      "timestamp": "2026-10-30T07:35:08",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4036,
+      "bbox": [
+        0.5,
+        206.2,
+        261.0,
+        248.2
+      ],
+      "position": {
+        "cx": 0.2043,
+        "cy": 0.4734,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480
+    },
+    {
+      "timestamp": "2026-10-30T07:36:08",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4443,
+      "bbox": [
+        0.5,
+        206.6,
+        259.0,
+        248.4
+      ],
+      "position": {
+        "cx": 0.2027,
+        "cy": 0.474,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480
+    },
+    {
+      "timestamp": "2026-10-30T07:36:38",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4387,
+      "bbox": [
+        0.5,
+        206.2,
+        259.5,
+        249.8
+      ],
+      "position": {
+        "cx": 0.2031,
+        "cy": 0.475,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480
+    },
+    {
+      "timestamp": "2026-10-30T07:37:08",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.499,
+      "bbox": [
+        0.5,
+        206.4,
+        257.8,
+        248.6
+      ],
+      "position": {
+        "cx": 0.2018,
+        "cy": 0.474,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480
+    },
+    {
+      "timestamp": "2026-10-30T07:37:38",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.5161,
+      "bbox": [
+        0.8,
+        206.8,
+        258.8,
+        248.8
+      ],
+      "position": {
+        "cx": 0.2027,
+        "cy": 0.4745,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480
+    },
+    {
+      "timestamp": "2026-10-30T07:38:08",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4204,
+      "bbox": [
+        0.8,
+        207.0,
+        260.2,
+        248.5
+      ],
+      "position": {
+        "cx": 0.2039,
+        "cy": 0.4745,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480,
+      "crop_path": "/tmp/night-window-1xue3st8/20261030-073808-s137-train-0.png",
+      "mask_path": "/tmp/night-window-1xue3st8/20261030-073808-s137-train-0-mask.png"
+    },
+    {
+      "timestamp": "2026-10-30T07:38:38",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4268,
+      "bbox": [
+        0.8,
+        206.4,
+        260.8,
+        248.6
+      ],
+      "position": {
+        "cx": 0.2043,
+        "cy": 0.474,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480
+    },
+    {
+      "timestamp": "2026-10-30T07:39:08",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4624,
+      "bbox": [
+        0.5,
+        206.5,
+        264.8,
+        247.5
+      ],
+      "position": {
+        "cx": 0.2072,
+        "cy": 0.4729,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480
+    },
+    {
+      "timestamp": "2026-10-30T07:39:38",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4246,
+      "bbox": [
+        0.2,
+        207.2,
+        272.2,
+        247.2
+      ],
+      "position": {
+        "cx": 0.2129,
+        "cy": 0.4734,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480,
+      "crop_path": "/tmp/night-window-1xue3st8/20261030-073938-s140-train-0.png",
+      "mask_path": "/tmp/night-window-1xue3st8/20261030-073938-s140-train-0-mask.png"
+    },
+    {
+      "timestamp": "2026-10-30T07:40:08",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.5693,
+      "bbox": [
+        0.5,
+        203.0,
+        415.0,
+        247.5
+      ],
+      "position": {
+        "cx": 0.3246,
+        "cy": 0.4693,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480,
+      "crop_path": "/tmp/night-window-1xue3st8/20261030-074008-s141-train-0.png",
+      "mask_path": "/tmp/night-window-1xue3st8/20261030-074008-s141-train-0-mask.png"
+    },
+    {
+      "timestamp": "2026-10-30T07:42:38",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4275,
+      "bbox": [
+        0.8,
+        206.8,
+        261.2,
+        247.8
+      ],
+      "position": {
+        "cx": 0.2047,
+        "cy": 0.4734,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480
+    },
+    {
+      "timestamp": "2026-10-30T07:43:08",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4031,
+      "bbox": [
+        0.5,
+        207.0,
+        261.0,
+        248.0
+      ],
+      "position": {
+        "cx": 0.2043,
+        "cy": 0.474,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480,
+      "crop_path": "/tmp/night-window-1xue3st8/20261030-074308-s147-train-0.png",
+      "mask_path": "/tmp/night-window-1xue3st8/20261030-074308-s147-train-0-mask.png"
+    },
+    {
+      "timestamp": "2026-10-30T07:43:38",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4775,
+      "bbox": [
+        0.8,
+        206.6,
+        259.8,
+        247.4
+      ],
+      "position": {
+        "cx": 0.2035,
+        "cy": 0.4729,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480
+    },
+    {
+      "timestamp": "2026-10-30T07:44:08",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.5308,
+      "bbox": [
+        0.0,
+        200.0,
+        591.0,
+        244.0
+      ],
+      "position": {
+        "cx": 0.4617,
+        "cy": 0.4625,
+        "horizontal": "center",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480
+    },
+    {
+      "timestamp": "2026-10-30T07:44:38",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4182,
+      "bbox": [
+        0.5,
+        206.5,
+        260.8,
+        248.0
+      ],
+      "position": {
+        "cx": 0.2041,
+        "cy": 0.4734,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480,
+      "crop_path": "/tmp/night-window-1xue3st8/20261030-074438-s150-train-0.png",
+      "mask_path": "/tmp/night-window-1xue3st8/20261030-074438-s150-train-0-mask.png"
+    },
+    {
+      "timestamp": "2026-10-30T07:45:38",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.4407,
+      "bbox": [
+        0.2,
+        207.4,
+        266.5,
+        246.6
+      ],
+      "position": {
+        "cx": 0.2084,
+        "cy": 0.4729,
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480,
+      "crop_path": "/tmp/night-window-1xue3st8/20261030-074538-s152-train-0.png",
+      "mask_path": "/tmp/night-window-1xue3st8/20261030-074538-s152-train-0-mask.png"
+    },
+    {
+      "timestamp": "2026-10-30T07:50:08",
+      "class_name": "train",
+      "class_id": 6,
+      "confidence": 0.5215,
+      "bbox": [
+        0.0,
+        199.1,
+        588.0,
+        247.9
+      ],
+      "position": {
+        "cx": 0.4594,
+        "cy": 0.4656,
+        "horizontal": "center",
+        "vertical": "middle"
+      },
+      "crop": null,
+      "frame_width": 640,
+      "frame_height": 480
+    }
+  ],
+  "speculations": [
+    {
+      "timestamp": "2026-10-30T06:31:08",
+      "class_name": "traffic light",
+      "text": "A soft green glow flickers against the dark glass of an empty window as if waking up from a long sleep.",
+      "model": "qwen3.5:0.8b"
+    },
+    {
+      "timestamp": "2026-10-30T07:22:38",
+      "class_name": "train",
+      "text": "A soft, hazy light spills across the glass of a window as if it were still holding its breath.",
+      "model": "qwen3.5:0.8b"
+    },
+    {
+      "timestamp": "2026-10-30T07:29:38",
+      "class_name": "train",
+      "text": "A faint, ethereal glow spills across the glass as if the world has paused to witness something unseen.",
+      "model": "qwen3.5:0.8b"
+    },
+    {
+      "timestamp": "2026-10-30T07:40:08",
+      "class_name": "train",
+      "text": "The darkness outside the window is thick with the scent of wet wool and distant rain, as if the world has already begun to dissolve into a soft, golden haze.",
+      "model": "qwen3.5:0.8b"
+    },
+    {
+      "timestamp": "2026-10-30T07:45:38",
+      "class_name": "train",
+      "text": "The cold wind whispered through the crack of the window as I watched the city fade into a soft, golden twilight.",
+      "model": "qwen3.5:0.8b"
+    }
+  ]
+}
