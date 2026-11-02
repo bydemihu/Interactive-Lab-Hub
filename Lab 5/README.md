@@ -357,22 +357,22 @@ Document all the prototypes and iterations you have designed and worked on. The 
 * Looks like (system): A Raspberry pi, with a camera pointing outside a window and a temperature/humidity sensor left outdoors through a gap in the window.
 * Looks like (output): A paper postcard with ASCII art showing the objects detected, but rendered in a more abstract digital form rather than a realistic photographic capture. Notes from QWEN provide poetic insights about the scene observed. A barcode across the top records the temperature and humidity changes: the color of the bar denotes temperature (cold blue to warm red gradient, ranging from 10C to 40C), and the height of the bar/waveform shows changes in humidity (more humidity makes the ink "bleed" and spread farther.)
 * Works like: Observes the outside world as the user sleeps, acting like a "second consciousness". Generates a postcard artwork for the user when they wake: a souvenir of the machine's consciousness.
-* Acts like: The user starts the interaction, goes to bed, and is automatically given the final postcard image when they wake.\
+* Acts like: The user starts the interaction, goes to bed, and is automatically given the final postcard image when they wake.  
 
 <img width="1470" height="2108" alt="image" src="https://github.com/user-attachments/assets/1d8e3fbf-1b2f-4044-acf9-3900ad0e749c" />
-Captured at the Makerlab.\
+Captured at the Makerlab.  
 
 <img width="1470" height="2108" alt="image" src="https://github.com/user-attachments/assets/70e09c24-fc8d-458d-979a-15158d0a58a7" />
-Captured at the Makerlab.\
+Captured at the Makerlab.  
 
 <img width="1470" height="2108" alt="image" src="https://github.com/user-attachments/assets/785a4bed-61c0-48be-9484-af714c586823" />
-Captured at home in Astoria.\
+Captured at home in Astoria.  
 
 <img width="1470" height="2108" alt="image" src="https://github.com/user-attachments/assets/889e60c2-867e-48e2-b9e7-7781255a599b" />
-Test capture on campus.\
+Test capture on campus.  
 
 <img width="3988" height="2140" alt="image" src="https://github.com/user-attachments/assets/75b41e80-011d-4d48-a30d-06848c8451bc" />
-Test with downloaded images.\
+Test with downloaded images.  
 
 
 
