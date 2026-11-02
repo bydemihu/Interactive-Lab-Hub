@@ -1,6 +1,6 @@
 # Observant Systems: Overnight Sensation
 
-**NAMES OF COLLABORATORS HERE**
+**Vasudha Devkota, Jaclyn Pham, Demi Hu**
 
 For lab this week, we focus on creating interactive systems that can detect and respond to events or stimuli in the environment of the Pi, like the Boat Detector we mentioned in lecture. 
 Your **observant device** could, for example, count items, find objects, recognize an event or continuously monitor a room.
@@ -314,6 +314,7 @@ Use storyboards and/or [Verplank diagrams](https://ccrma.stanford.edu/courses/25
 The hand-off: the person tells the device what to watch tonight, and the device acknowledges it. Keep it to a thirty-second ritual. A button or a touch (Lab 4), a spoken sentence (Lab 3), a wave or a Quiet Coyote at the camera (Part C). The acknowledgement can be a line on the display, a tone, or an LED that dims rather than lights up. At its simplest, the hand-off just sets the question that the morning will answer.
 
 \*\*\***Describe the interaction before.**\*\*\*
+Version 1: There is only a camera. It takes readings based on a user-set interval and duration and it YOLO detects the classes of objects in frame. Based on what's detected, QWEN makes a few poetic observations of the scene. The objects are converted into ASCII artwork and placed onto the postcard, and a paper overlay texture goes over it. 
 
 ## Part H. 
 ### Incorporate the observant system
@@ -328,6 +329,11 @@ The Part E pipeline becomes the night shift. `overnight.py` runs your `interpret
 Fake a night first: run it for thirty seconds while you walk around, stop it, and run `morning.py` from Part I. When that looks right, run a real night. If your storyboard needs a sensor rather than the camera, swap in the Lab 4 example code and log its reading the same way.
 
 \*\*\***Screenshots or videos of the running system.**\*\*\*
+<img width="2160" height="2880" alt="image" src="https://github.com/user-attachments/assets/1f01a129-17fb-429c-bdbb-f847afc546a2" />
+Home deployment: The camera watches a backyard view and sees the N/W train pass by as the sun rises. A temperature/humidity sensor is left outside the window and takes temperature readings with each detection frame.
+<img width="2160" height="2880" alt="image" src="https://github.com/user-attachments/assets/f8585175-7743-4946-8a6f-93824f4d4803" />
+Makerlab deployment: The camera watches the inside of the Makerlab overnight, capturing the movements of night owls working on campus and the various objects they're interacting with.
+
 
 ## Part I. 
 ### Design the interaction after
@@ -347,6 +353,26 @@ Document all the prototypes and iterations you have designed and worked on. The 
 * "Looks like": how the device sits in the room at night, and what it looks like at bedtime and in the morning.
 * "Works like": the pipeline from detector to interpreter to log to reasoner, with a real night's data.
 * "Acts like": how a person hands the night over and what they get back.
+
+* Looks like (system): A Raspberry pi, with a camera pointing outside a window and a temperature/humidity sensor left outdoors through a gap in the window.
+* Looks like (output): A paper postcard with ASCII art showing the objects detected, but rendered in a more abstract digital form rather than a realistic photographic capture. Notes from QWEN provide poetic insights about the scene observed. A barcode across the top records the temperature and humidity changes: the color of the bar denotes temperature (cold blue to warm red gradient, ranging from 10C to 40C), and the height of the bar/waveform shows changes in humidity (more humidity makes the ink "bleed" and spread farther.)
+* Works like: Observes the outside world as the user sleeps, acting like a "second consciousness". Generates a postcard artwork for the user when they wake: a souvenir of the machine's consciousness.
+* Acts like: The user starts the interaction, goes to bed, and is automatically given the final postcard image when they wake.
+
+<img width="1470" height="2108" alt="image" src="https://github.com/user-attachments/assets/1d8e3fbf-1b2f-4044-acf9-3900ad0e749c" />
+Captured at the Makerlab.
+
+<img width="1470" height="2108" alt="image" src="https://github.com/user-attachments/assets/70e09c24-fc8d-458d-979a-15158d0a58a7" />
+Captured at the Makerlab.
+
+<img width="1470" height="2108" alt="image" src="https://github.com/user-attachments/assets/785a4bed-61c0-48be-9484-af714c586823" />
+Captured at home in Astoria.
+
+<img width="1470" height="2108" alt="image" src="https://github.com/user-attachments/assets/b1364865-1af1-43fa-a51f-6dd3633bf37a" />
+Captured at home in Astoria.
+
+
+
 
 \*\*\***Include a short video of the whole system**\*\*\*
 
