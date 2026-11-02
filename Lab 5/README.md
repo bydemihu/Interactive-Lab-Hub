@@ -316,6 +316,11 @@ The hand-off: the person tells the device what to watch tonight, and the device 
 \*\*\***Describe the interaction before.**\*\*\*
 Version 1: There is only a camera. It takes readings based on a user-set interval and duration and it YOLO detects the classes of objects in frame. Based on what's detected, QWEN makes a few poetic observations of the scene. The objects are converted into ASCII artwork and placed onto the postcard, and a paper overlay texture goes over it. 
 
+
+<img width="3000" height="2000" alt="image" src="https://github.com/user-attachments/assets/b20080e6-8e64-406c-a735-d4fae2733c38" />
+
+Version 2: There is additionally a DHT11 temperature/humidity module. This gives the system more "presence" and embodiment in the world, distilling not just the objects it sees but what it feels like to live in this world.
+
 ## Part H. 
 ### Incorporate the observant system
 
