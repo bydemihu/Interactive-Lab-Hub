@@ -5,4 +5,8 @@ ncnn
 requests
 Adafruit-Blinka
 adafruit-circuitpython-dht
+adafruit-circuitpython-ltr390
+adafruit-circuitpython-bno055
+sounddevice
+SpeechRecognition
 gpiod>=2.2.2,<3
