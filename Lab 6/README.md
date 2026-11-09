@@ -19,73 +19,38 @@ The squeeze matches the bend. The glove sends a number from 0 to 180. The other 
 
 ## Storyboard
 
-<img src="storyboard.jpeg" alt="Five-panel storyboard of A and B sharing a squeeze across distance" width="720">
+<img width="4099" height="3665" alt="image" src="https://github.com/user-attachments/assets/79b2f132-29be-4af6-9039-ee514978adfe" />
+A and B are two lovers. A squeezes his hand, which contains a flex sensor. B's robot hand mimics the motion at the same time and intensity. She wears a watch which also receives a notification if A squeezes his hand, so that she knows even when she's physically away from her robot hand. Once she's with the hand, she can hold it, feeling the squeeze from A no matter where he is in the world.
 
-A and B are far apart, still on the phone. A squeezes his robot hand. B's robot hand copies the curl. If she is away from that hand, her watch still gets a note. In the drawing it says "Love from A!" In the last panel she feels A's hand holding hers. That last moment is the whole idea. The watch text we actually send is shorter: `IN PROGRESS` while the hand is curling, and `STOP` when it opens.
+## Process Documentation
+### Soft Sensor Hand
+Version 1 of the soft sensor hand was made with tissues stuffed in a glove. The flex sensor was inserted vertically. Version 2 uses fluffy yarn for a softer, more squeezable texture with resistance and bounceback. The flex sensor is placed horizontally to better read the bend when a human hand squeezes it.
+Process video, version 1 test: (video)[https://youtu.be/k6j-tZg15-8]
 
-## Making the hand
+### Articulated Robot Hand
+The robot hand was made with 3D printed fingers. The initial plan was to place these fingers inside a glove as a skeleton, then surround it with softer foam or tissue for a huggable texture. In the first version, there are two strings that run along each side, and pulling one or the other makes the finger bend in a different direction. The rigid PLA connections made the fingers rather stiff.
+<img width="942" height="920" alt="image" src="https://github.com/user-attachments/assets/ce3d2fe8-a4fd-4bb7-a15f-cebd5083f196" />
 
-We started with the sensing glove, then a black glove with foam on the fingertips, then the printed fingers. These clips are our own tests at the desk, in the order we filmed them.
+In version 2, we tried using articulated joints rather than living hinges. They look smoother and more readable as fingers, but the strings run parallel to the bending direction, so the fingers can only be bent in one direction and must be manually flattened again. Although version 1 would have had the movement we needed for the project (eg. letting the servo both curl and extend the fingers), due to material constraints we went with version 2. A servo motor pulls at the strings, which in turn curls the fingers.
+<img width="942" height="1018" alt="image" src="https://github.com/user-attachments/assets/2054d118-9fd6-4a90-87b4-efdecc4657e1" />
 
-**Bending the white glove while the reading is running.** The bend sensor sits on the back of the hand. A Pi and one loose printed finger are on the desk.
+### Pi Display
+The third Pi controls not a hand but a small LED display, meant to mimic the screen of a wearable such as a smartwatch. We used the tiny OLed screen provided, and set up the final system (two hands and one screen) like the below.
+<img width="1446" height="820" alt="image" src="https://github.com/user-attachments/assets/6329e63f-5c69-4ebd-85c1-2d9880880446" />
 
-<video src="design%20progress/IMG_1210.MOV" controls width="640"></video>
 
-**The same glove over the keyboard**, with the readings open on the screen below.
+### Photos
+<img width="2108" height="1258" alt="image" src="https://github.com/user-attachments/assets/35a07778-ccd5-4ab9-ab35-1d4950443606" />
+<img width="2108" height="1258" alt="image" src="https://github.com/user-attachments/assets/c0474c3a-fb2b-4dbe-8429-857853e8461b" />
+<img width="2160" height="2880" alt="image" src="https://github.com/user-attachments/assets/a394f311-639d-4f58-85d8-b4d452739566" />
+The last photo is a user test. The user described the hand as soft to the touch.
 
-<video src="design%20progress/IMG_1211.MOV" controls width="640"></video>
 
-**The glove sitting still.** The sensor runs down the back of the hand. The Pi is at the right edge of the frame.
 
-<video src="design%20progress/IMG_1212.MOV" controls width="640"></video>
 
-**Pressing the glove flat**, to watch the sensor go through a full bend.
+## Wireless Communication
 
-<video src="design%20progress/IMG_1213.MOV" controls width="640"></video>
-
-**The black glove**, with foam on the fingertips, next to a Pi. The laptop is printing the numbers.
-
-<video src="design%20progress/IMG_1214.MOV" controls width="640"></video>
-
-**A closer look at that glove**, with the Pi's light on.
-
-<video src="design%20progress/IMG_1215.MOV" controls width="640"></video>
-
-### The printed fingers
-
-The first fingers were three separate prints, two pale and one black. Each one is a row of little blocks with a clear string through the joints. That string is the Xstrings idea. Pull it, and the finger curls.
-
-<img src="physical%20design/first%20fingers%20with%20Xstring.jpg" alt="Three printed fingers with clear tendon line" width="480">
-
-The next fingers are smooth segments instead of a zigzag. They sit on a white glove, and the Pi is already on the table. These are Flexy Hand fingers, cut down so we could run the string ourselves.
-
-<img src="physical%20design/second%20fingers%20mode.jpg" alt="Segmented blue fingers laid on a white glove" width="640">
-
-Then we printed the palm. Yellow palm, blue fingers, holes at the joints for the string.
-
-<img src="physical%20design/full%20hand%20model.jpg" alt="Yellow Flexy Hand palm with blue fingers, partly curled" width="480">
-
-### The two gloves
-
-The sending glove is white and soft. A bend sensor runs along the back of the hand, with a small board on the wires. Next to it are the printed hand, a loose SG-5010, and the string, not tied to the servo yet.
-
-<img src="physical%20design/IMG_8141.jpg" alt="Sensing glove, flex sensor, printed hand, and a loose servo" width="480">
-
-The receiving glove is black. The blue finger pieces are tied on, and clear strings run from the fingertips to one servo at the wrist. That one servo pulls every finger we strung. The white glove in front shows the bend sensor the other Pi is reading.
-
-<img src="physical%20design/install%20setup%20.jpg" alt="White sensing glove in front of the strung blue fingers and servo" width="640">
-
-On the table the two hands sit apart, the way the people in the story do. The white glove and its sensor are on the left. The strung hand and the servo are on the right. Each one has its own Pi.
-
-<img src="physical%20design/installation%20setup.jpg" alt="Both gloves on the table, each wired to a Pi" width="640">
-
-The sensing glove plugged into a Raspberry Pi 4. The bend sensor crosses the wrist, and the printed fingers and servo sit just behind the glove.
-
-<img src="physical%20design/IMG_8137.jpg" alt="Raspberry Pi wired to the sensing glove, receiving hand behind it" width="640">
-
-## Across the network
-
-Three Pis share the class message server, `farlab.infosci.cornell.edu:1883`. Each Pi has one job.
+Three Pis use the class message server, `farlab.infosci.cornell.edu:1883`. They publish and read from different addresses: IDD/djv/bend is the bending data as a number bounded from 0-180, and IDD/djv/text is the interaction state between the two hands as text such as "IN PROGRESS" or "STOPPED".
 
 ```mermaid
 flowchart LR
