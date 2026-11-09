@@ -4,13 +4,13 @@
 
 **Members:** Jaclyn Pham (cqp4), Demi Hu (dh785), Vasudha Devkota (vd269)
 
-**Project name:** TeleAbsence
+**Project name:** TeleAbsence Hands
 
 ## Project description
 
 TeleAbsence is a networked artwork about communicating care across distance through touch. When someone presses one soft robotic hand, its pressure sensor sends the signal over MQTT to a second Raspberry Pi. A servo on that Pi pulls strings attached to the fingers of another soft hand, creating a gentle squeeze. A third Pi receives confirmation that the action completed and displays a brief notification, letting the sender know their touch arrived. The project turns a small physical gesture into a tactile message, and makes its arrival visible.
 
-The squeeze is not a single on/off pinch. The first hand publishes how far it is bent, as a number from 0 to 180. The second hand turns its servo to that same angle, so a light press is a small curl and a firm press is a deeper one. Letting go sends 0, the strings slack, and the receiving hand opens. While the angle is anything other than 0, the second Pi tells the third Pi `IN PROGRESS`. At 0 it sends `STOP`. The sender sees that the touch landed, and sees when it ended.
+The squeeze is not an on/off pinch, but a variable one based on squeeze strength. The first hand publishes how far it is bent, capped as a number from 0 to 180. The second hand turns its servo to that same angle, so a light press is a small curl and a firm press is a deeper one. Letting go sends 0, the strings slack, and the receiving hand opens. While the angle is anything other than 0, the second Pi tells the third Pi `IN PROGRESS`. At 0 it sends `STOP`. The sender sees that the touch landed, and sees when it ended.
 
 ## Architecture
 
@@ -46,7 +46,7 @@ flowchart LR
 | 2 | Computation and output | Raspberry Pi, SparkFun Servo pHAT, TowerPro SG-5010, strings to a second soft hand | Subscribes to `IDD/djv/bend`. Publishes `IDD/djv/text` |
 | 3 | Output | Screen for a short notice | Subscribes to `IDD/djv/text` |
 
-The number on `IDD/djv/bend` is the horn angle in degrees. `0` is open. `180` is a full turn of the SG-5010, which is as far as that servo can pull the strings. Pi 2 keeps the newest sample and moves once a second, because the sensor stream arrives faster than the servo can usefully retarget.
+The number publishes to `IDD/djv/bend` is the horn angle in degrees. `0` is open. `180` is a full turn of the SG-5010, which is as far as that servo can pull the strings. Pi 2 keeps the newest sample and moves once a second, because the sensor stream arrives faster than the servo can usefully retarget.
 
 `IN PROGRESS` and `STOP` are retained. The broker keeps the last one, so Pi 3 still learns the current state if it connects while a squeeze is already happening.
 
