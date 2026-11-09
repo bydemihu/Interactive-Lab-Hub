@@ -117,11 +117,6 @@ This servo can turn about halfway around, and then it stops. It cannot wind the 
 
 Next time we would add a sensor on the receiving fingers, so `IN PROGRESS` and `STOP` meant someone was actually touching the hand, not only that the servo had been told to move. A servo on each finger would let the squeeze pick out one finger. The watch text in the drawing, "Love from A!", is warmer than the two words we send. Those two words are the note a third Pi can trust.
 
-## Outside the team
-
-One person who is not on the team tried the two hands. They said, "It's such a novel way to show intimacy."
-
-They felt the curl as a way of being close. That is the reaction we were hoping for.
 
 <details>
 <summary>How to run it, and the files</summary>
