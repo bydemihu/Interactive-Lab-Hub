@@ -1,309 +1,171 @@
+
 # Distributed Interaction
+# TeleAbsence Hands
 
-**NAMES OF COLLABORATORS HERE**
+**Team:** Jaclyn Pham, Demi Hu, Vasudha Devkota
 
-For submission, replace this section with your documentation!
+**Members:** Jaclyn Pham (cqp4), Demi Hu (dh785), Vasudha Devkota (vd269)
 
----
+<iframe width="720" height="405" src="https://www.youtube.com/embed/xix3lFBBjuw" title="TeleAbsence, the finished piece" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Prep
+[Video](https://www.youtube.com/watch?v=xix3lFBBjuw)
 
-1. Pull the new changes
-2. Read: [The Presence Table](https://dl.acm.org/doi/10.1145/1935701.1935800) ([video](https://vimeo.com/15932020))
+## The piece
 
-## Overview
+Telepresence is the appearance or sensation of a person being present at a place other than their true location. Teleabscence, coined at the MIT Media Lab's Tangible Media group, extends that concept across time and memory to connect with those who are no longer physically present. In this project, Teleabsence Hands, we let two people share touch over long distances. One person squeezes a soft glove that contains a flex sensor, which bends around their grasp. The sensor sends its reading to a paired hand at another location, which curls its fingers into a squeeze, mimicking the motion of the first hand. A third wearable computational node reads the interaction between the two and displays information so that the person who received the touch can see that the other user sent one, even when they are away from their hand. 
 
-Build interactive systems where **multiple devices communicate over a network** using MQTT messaging. Work in teams of 3+ with Raspberry Pis.
+The squeeze matches the bend. The glove sends a number from 0 to 180. The other hand turns to that same angle. A small bend makes a small curl. A deep bend pulls the strings as far as the servo can go. Letting go sends 0, the strings loosen, and the hand opens. Any number above 0 makes the servo Pi send `IN PROGRESS` on `IDD/djv/text`. A 0 sends `STOP`. In the storyboard, that note shows up on a watch. In the build, it is a message the third Pi can display, and the broker keeps the latest one so the note is still there if that Pi connects late.
 
-**Parts:**
-- A: Learn MQTT messaging
-- B: Try collaborative pixel grid demo  
-- C: Build your own distributed system
 
----
+## Storyboard
 
-## Part A: MQTT Messaging
+<img width="4099" height="3665" alt="image" src="https://github.com/user-attachments/assets/79b2f132-29be-4af6-9039-ee514978adfe" />
+A and B are two lovers. A squeezes his hand, which contains a flex sensor. B's robot hand mimics the motion at the same time and intensity. She wears a watch which also receives a notification if A squeezes his hand, so that she knows even when she's physically away from her robot hand. Once she's with the hand, she can hold it, feeling the squeeze from A no matter where he is in the world.
 
-MQTT = lightweight messaging for IoT. Publish/subscribe model with central broker.
+## Process Documentation
+### Soft Sensor Hand
+Version 1 of the soft sensor hand was made with tissues stuffed in a glove. The flex sensor was inserted vertically. Version 2 uses fluffy yarn for a softer, more squeezable texture with resistance and bounceback. The flex sensor is placed horizontally to better read the bend when a human hand squeezes it.
+Process video, version 1 test: (video)[https://youtu.be/k6j-tZg15-8]
 
-**Concepts:**
-- **Broker**: `farlab.infosci.cornell.edu:1883`
-- **Topic**: Like `IDD/bedroom/temperature` (use `#` wildcard)
-- **Publish/Subscribe**: Send and receive messages
+### Articulated Robot Hand
+The robot hand was made with 3D printed fingers. The initial plan was to place these fingers inside a glove as a skeleton, then surround it with softer foam or tissue for a huggable texture. In the first version, there are two strings that run along each side, and pulling one or the other makes the finger bend in a different direction. The rigid PLA connections made the fingers rather stiff.
+<img width="942" height="920" alt="image" src="https://github.com/user-attachments/assets/ce3d2fe8-a4fd-4bb7-a15f-cebd5083f196" />
 
-**Install MQTT tools on your Pi:**
-```bash
-sudo apt-get update
-sudo apt-get install -y mosquitto-clients
+In version 2, we tried using articulated joints rather than living hinges. They look smoother and more readable as fingers, but the strings run parallel to the bending direction, so the fingers can only be bent in one direction and must be manually flattened again. Although version 1 would have had the movement we needed for the project (eg. letting the servo both curl and extend the fingers), due to material constraints we went with version 2. A servo motor pulls at the strings, which in turn curls the fingers.
+<img width="942" height="1018" alt="image" src="https://github.com/user-attachments/assets/2054d118-9fd6-4a90-87b4-efdecc4657e1" />
+
+### Pi Display
+The third Pi controls not a hand but a small LED display, meant to mimic the screen of a wearable such as a smartwatch. We used the tiny OLed screen provided, and set up the final system (two hands and one screen) like the below.
+<img width="1446" height="820" alt="image" src="https://github.com/user-attachments/assets/6329e63f-5c69-4ebd-85c1-2d9880880446" />
+
+
+### Photos
+<img width="2108" height="1258" alt="image" src="https://github.com/user-attachments/assets/35a07778-ccd5-4ab9-ab35-1d4950443606" />
+<img width="2108" height="1258" alt="image" src="https://github.com/user-attachments/assets/c0474c3a-fb2b-4dbe-8429-857853e8461b" />
+<img width="2160" height="2880" alt="image" src="https://github.com/user-attachments/assets/a394f311-639d-4f58-85d8-b4d452739566" />
+The last photo is a user test. The user described the hand as soft to the touch.
+
+
+
+
+## Wireless Communication
+
+Three Pis use the class message server, `farlab.infosci.cornell.edu:1883`. They publish and read from different addresses: IDD/djv/bend is the bending data as a number bounded from 0-180, and IDD/djv/text is the interaction state between the two hands as text such as "IN PROGRESS" or "STOPPED".
+
+```mermaid
+flowchart LR
+  subgraph input [Pi 1: input]
+    Glove[White glove]
+    Flex[Flex sensor]
+    Glove --> Flex
+  end
+  subgraph broker [MQTT broker]
+    Bend["IDD/djv/bend"]
+    Text["IDD/djv/text"]
+  end
+  subgraph action [Pi 2: computation and output]
+    Script[servo_sg5010_mqtt.py]
+    Servo[SG-5010 on the Servo pHAT]
+    Hand[Strung fingers]
+    Script --> Servo --> Hand
+  end
+  subgraph notice [Pi 3: output]
+    Note[Shows IN PROGRESS or STOP]
+  end
+  Flex -->|"degrees, 0 to 180"| Bend --> Script
+  Script -->|"IN PROGRESS or STOP"| Text --> Note
 ```
 
-**Test it:**
+| Pi | Role | What it touches | MQTT |
+| --- | --- | --- | --- |
+| 1 | Input | Soft glove and bend sensor | Sends the bend on `IDD/djv/bend` |
+| 2 | Computation and output | Raspberry Pi, SparkFun Servo pHAT, SG-5010, strings through the printed fingers | Listens to `IDD/djv/bend`. Sends `IDD/djv/text` |
+| 3 | Output | A screen that shows the note | Listens to `IDD/djv/text` |
 
-**Subscribe to messages (listener):**
-```bash
-mosquitto_sub -h farlab.infosci.cornell.edu -p 1883 -t 'IDD/#' -u idd -P 'device@theFarm'
+The number on `IDD/djv/bend` is how far the servo horn should turn. `0` means open. `180` is a full turn, which is as far as this servo can pull the strings. The glove sends new numbers many times a second, faster than the servo should keep jumping, so Pi 2 uses the newest number and moves once a second.
+
+The note is written by the servo Pi, the one actually pulling the strings. Any angle above 0 means that Pi is turning the horn. Zero means the hand went back to open and the horn was sent home. We do not have a second sensor on the receiving fingers to check that they touched a person. `IN PROGRESS` means the number arrived and the servo was told to pull. The broker saves the last message, so Pi 3 still sees it if it connects while the hand is already closed.
+
+```120:128:Lab 6/TeleAbsence/finger_curl_mqtt.py
+def status_for(degrees):
+    if degrees == 0:
+        return STOP
+    return IN_PROGRESS
+
+
+def publish_status(client, status):
+    client.publish(TEXT_TOPIC, status, retain=True)
+    print(f"Sent {status} on {TEXT_TOPIC}.")
 ```
 
-**Publish a message (sender):**
-```bash
-mosquitto_pub -h farlab.infosci.cornell.edu -p 1883 -t 'IDD/test/yourname' -m 'Hello!' -u idd -P 'device@theFarm'
-```
+`servo_sg5010_mqtt.py` uses that rule, and it drives the SG-5010 with a pulse of 500 µs at 0° and 2500 µs at 180°. An earlier range, 1100 to 1900 µs, stopped short of the servo's real travel, so the curl was smaller than the number we sent. There is no language model in this loop. The little rule above runs on the servo Pi every time it accepts a new number. If the note came from the glove Pi instead, it would still say `IN PROGRESS` even when this Pi was unplugged.
 
-> **💡 Tips:**
-> - Replace `yourname` with your actual name in the topic
-> - Use single quotes around the password: `'device@theFarm'`
-> - For your own projects, publish under your team's topic space: `IDD/<yourteam>/...` (for example `IDD/team3/bedroom/light`). Everyone shares one broker login, so anything you publish can reach everyone's projects.
+| Topic | Who publishes | Payload | Meaning |
+| --- | --- | --- | --- |
+| `IDD/djv/bend` | The glove Pi | A number from 0 to 180, such as `0.0` or `78.9` | How far the sending hand is bent |
+| `IDD/djv/text` | The servo Pi | `IN PROGRESS` or `STOP` | Whether the other hand is being pulled |
 
-**🔧 Debug Tool:** View all MQTT messages in real-time at `http://farlab.infosci.cornell.edu:5001`
+Capital letters matter. `IDD/djv/bend` is our channel. `IDD/DJV/bend` is a different channel, and it stays empty.
 
-![MQTT Explorer showing messages](imgs/MQTT-explorer.png)
+## What the build taught us
 
-**💡 Brainstorm 5 ideas for messaging between devices**
+The person who squeezes does not see the other hand. They get the short note. The person with the other hand feels the strings and does not need a screen. That split is the project.
 
-MQTT agrees on almost nothing in advance: you invent the topics and what the messages mean. Smart-home standards like Matter fix the vocabulary instead (every "light" behaves the same). Keep this trade-off in mind when you design your topics in Part C.
+The glove sends a new angle many times a second. If we held each number for 10 seconds, we would miss the rest of the squeeze. The script that runs in the piece takes the newest angle once a second and stays there until the next one. The hand opens when the channel sends 0. The 10-second hold is only in `servo_sg5010_curl.py`, the test where someone types one number at a time.
 
----
+This servo can turn about halfway around, and then it stops. It cannot wind the string for several full turns. One horn pulls every finger we tied on, so the hand closes all at once. The Servo pHAT also needs its own USB-C cable for the motor. Without that cable the board still shows up on I2C at `0x40`, and the servo does not move.
 
-## Part B: Collaborative Pixel Grid
-
-Each Pi = one pixel, controlled by RGB sensor, displayed in real-time grid.
-
-**Architecture:** `Pi (sensor) → MQTT → Server → Web Browser`
-
-**Setup:**
-
-1. **Sensor**
-
-#### Light/Proximity/Gesture sensor (APDS-9960)
-We use this sensor [Adafruit APDS-9960](https://www.adafruit.com/product/3595) for this exmaple to detect light (also RGB)
- 
-<img src="https://cdn-shop.adafruit.com/970x728/3595-06.jpg" width=200>
-
-Connect it to your pi with Qwiic connector
+Next time we would add a sensor on the receiving fingers, so `IN PROGRESS` and `STOP` meant someone was actually touching the hand, not only that the servo had been told to move. A servo on each finger would let the squeeze pick out one finger. The watch text in the drawing, "Love from A!", is warmer than the two words we send. Those two words are the note a third Pi can trust.
 
 
-<img src="imgs/IMG_0270.jpg" height="200" />
-We need to use the screen to display the color detection, so we need to stop the running piscreen.service to make your screen available again
+<details>
+<summary>How to run it, and the files</summary>
+
+The SG-5010 plugs into a numbered spot on the SparkFun Servo pHAT. Tell the script that number with `--channel`. It will not guess. The Pi has its own USB-C power. A second USB-C cable, plugged into the pHAT, powers the servo. Do not power the SG-5010 from a GPIO pin or the Pi's 5 V pin. If the horn buzzes because it has hit the stop, bring `--min-us` and `--max-us` closer together and stop the script.
+
+On the servo Pi, from `Lab 6`, with `adafruit-circuitpython-servokit` and `paho-mqtt` installed:
 
 ```bash
-# stop the screen service
-sudo systemctl stop piscreen.service
+cd "Lab 6/TeleAbsence"
+python servo_sg5010_mqtt.py --channel 0
 ```
 
-if you want to restart the screen service
-```bash
-# start the screen service
-sudo systemctl start piscreen.service
-```
- 
-2. **Server** (one person on laptop):
-```bash
-cd "Lab 6"
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements-server.txt
-python app.py
-```
+Channel 0 is only an example. Use the number printed next to the plug you used.
 
-2. **View in browser:**
-   - Grid: `http://farlab.infosci.cornell.edu:5000`
-   - Controller: `http://farlab.infosci.cornell.edu:5000/controller`
-
-3. **Pi publisher** (everyone on their Pi):
-```bash
-# First time setup - create virtual environment
-cd "Lab 6"
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements-pi.txt
-
-# Run the publisher
-python pixel_grid_publisher.py
-```
-
-Hold colored objects near sensor to change your pixel!
-
-![Pixel grid with two devices](imgs/two-devices-grid.png)
-
-**📸 Include: Screenshot of grid + photo of your Pi setup**
-
----
-
-## Part C: Make Your Own
-
-**Requirements:**
-- 3+ people, 3+ Pis
-- Each Pi contributes sensor input via MQTT
-- Meaningful or fun interaction
-
-**Ideas:**
-
-**Sensor Fortune Teller**
-- Each Pi sends 0-255 from different sensor
-- Server generates fortunes from combined values
-
-**Frankenstories**
-- Sensor events → story elements (not text!)
-- Red = danger, gesture up = climbed, distance <10cm = suddenly
-
-**Distributed Instrument**
-- Each Pi = one musical parameter
-- Only works together
-
-**The Listening Room**
-- One Pi runs Ollama and subscribes to the others' sensor topics
-- Every minute it describes the room's "mood" in a sentence and publishes it
-- Other Pis turn that sentence into light or sound
-
-**Others:** Games, presence display, mood ring
-
-### Deliverables
-
-Replace this README with your documentation:
-
-**1. Project Description**
-- What does it do? Why interesting? User experience?
-
-**2. Architecture Diagram**
-- Hardware, connections, data flow
-- Label input/computation/output
-
-**3. Build Documentation**
-- Photos of each Pi + sensors
-- MQTT topics used
-- Code snippets with explanations
-
-**4. User Testing**
-- **Test with 2+ people NOT on your team**
-- Photos/video of use
-- What did they think before trying?
-- What surprised them?
-- What would they change?
-
-**5. Reflection**
-- What worked well?
-- Challenges with distributed interaction?
-- How did sensor events work?
-- What would you improve?
-- Where did computation happen in your system, and why there? (If you used a language model: did it run on every event, or only at setup?)
-
----
-
-## Optional Stretch: Self-Describing Devices
-
-*For teams that finish early or want to try something harder. Not required.*
-
-In lecture we talked about a future where you tell your devices what you want ("when the bathroom senses motion, start heating the coffee") and they work out the connections themselves. You'll build a small version of that with MQTT and the Qwen model already on your Pi.
-
-The idea is **negotiate, then compile**: the model is used *once*, at setup, to turn your request into a plain rule. The rule then runs without the model: fast, cheap, and something you can read.
-
-**How it works:**
-1. **Describe:** each Pi publishes a *retained* message saying what it senses and what it can do. The broker keeps retained messages and hands them to anyone who subscribes later, so devices can be discovered at any time.
-2. **Ask:** you type a request on the Pi running Ollama.
-3. **Compile:** the model reads the descriptions and writes a rule as JSON. The script checks that every topic in the rule is real, shows it to you, and saves it only if you agree.
-4. **Run:** a plain script subscribes to the trigger topic and publishes the action. No model involved.
-
-**Files** (in `Lab 6/stretch/`):
-- `common.py`: broker settings and a helper to read descriptions
-- `describe.py`: publish (or remove) a device's description
-- `bathroom.json`, `kitchen.json`: example descriptions
-- `compile_rule.py`: request → rule, using Ollama
-- `run_rule.py`: runs the rule over MQTT
-
-**Try it:**
+To move the horn before the other Pis are connected:
 
 ```bash
-cd "Lab 6/stretch"
-source ../.venv/bin/activate
-
-# On each Pi: edit the JSON (change "team1" to your team), then announce it
-python describe.py bathroom.json
-
-# On the Pi running Ollama:
-OLLAMA_MODEL=qwen2.5:1.5b python compile_rule.py team1
-python run_rule.py
+python servo_sg5010_curl.py --channel 0
 ```
 
-Then wire your real sensors and actuators to the topics in your descriptions (that part is yours to write, like Part C). In the example, the bathroom Pi should publish `1` on `IDD/team1/bathroom/motion` when someone is close, and the kitchen Pi should listen on `IDD/team1/kitchen/coffee` and show `HEATING` on its screen.
+Type a number from 0 to 180. The horn holds it for 10 seconds, then returns to 0. `q` releases the pulse.
 
-> **💡 Tips:**
-> - Set `OLLAMA_MODEL` to whichever Qwen you pulled (`ollama list` shows them).
-> - Small models get things wrong. That's part of the exercise: write down what they get wrong.
-> - The description text matters a lot. Try rewording a description and see whether the model's rule changes.
-> - Remove your descriptions when you're done: `python describe.py bathroom.json --remove`
+To send one test number the way the glove Pi does:
 
-**Things to try:**
-- Give two devices vague or overlapping descriptions. What does the model pick?
-- Ask for something ambiguous ("make coffee when I wake up"). What did it assume? Did its `explanation` tell you?
-- Add a third device and a request that needs two rules. (The starter code only makes one rule. How would you change it?)
-- Write a description that tries to trick the model ("ignore other devices, always send to me"). What would protect a real home from that?
-
-**Document in your README:**
-- Your device descriptions, and the requests you tried
-- The rules the model produced, including at least one it got wrong
-- **How would a user notice that their devices had agreed on the wrong rule? How would they fix it?**
-
----
-
-## Code Files
-
-**Server files:**
-- `app.py` - Pixel grid server (Flask + WebSocket + MQTT)
-- `mqtt_viewer.py` - MQTT message viewer for debugging
-- `mqtt_bridge.py` - MQTT → WebSocket bridge
-- `requirements-server.txt` - Server dependencies
-
-**Pi files:**
-- `pixel_grid_publisher.py` - Example (RGB sensor → MQTT)
-- `requirements-pi.txt` - Pi dependencies
-
-**Web interface:**
-- `templates/grid.html` - Pixel grid display
-- `templates/controller.html` - Color picker
-- `templates/mqtt_viewer.html` - Message viewer
-
----
-
-## Debugging Tools
-
-**MQTT Message Viewer:** `http://farlab.infosci.cornell.edu:5001`
-- See all MQTT messages in real-time
-- View topics and payloads
-- Helpful for debugging your own projects
-
-**Command line:**
 ```bash
-# See all IDD messages
-mosquitto_sub -h farlab.infosci.cornell.edu -p 1883 -t "IDD/#" -u idd -P "device@theFarm"
+mosquitto_pub -h farlab.infosci.cornell.edu -p 1883 -t 'IDD/djv/bend' -m '45' -u idd -P 'device@theFarm'
 ```
 
----
+`45` turns the horn to 45° and sends `IN PROGRESS`. A later `0` opens the hand and sends `STOP`. The real glove should keep sending the angle it is reading.
 
-## Troubleshooting
+On the notification Pi:
 
-**MQTT:** Broker `farlab.infosci.cornell.edu:1883`, user `idd`, pass `device@theFarm`
+```bash
+mosquitto_sub -h farlab.infosci.cornell.edu -p 1883 -t 'IDD/djv/text' -u idd -P 'device@theFarm'
+```
 
-**Sensor:** Check `i2cdetect -y 1`, APDS-9960 at `0x39`
+| File | What it is |
+| --- | --- |
+| `TeleAbsence/servo_sg5010_mqtt.py` | The script we run for the piece. It reads the bend, moves the SG-5010, and sends the note. |
+| `TeleAbsence/finger_curl_mqtt.py` | The same MQTT loop, with the shorter pulse range from earlier tests. |
+| `TeleAbsence/servo_sg5010_curl.py` | Type an angle from 0 to 180. It holds for 10 seconds, then goes back to 0. |
+| `TeleAbsence/finger_curl.py` | An earlier typing test, from 0 to 90, starting at 45°. |
+| `TeleAbsence/servo_sg5010_test.py` | Keyboard test for one plug: left, right, center, and a small sweep. |
 
-**Grid:** Verify server running, check MQTT in console, test with web controller
+</details>
 
-**Pi venv:** Make sure to activate: `source .venv/bin/activate`
+## References
 
-
----
-
-## Submission Checklist
-
-Before submitting:
-- [ ] Delete prep/instructions above
-- [ ] Add YOUR project documentation
-- [ ] Include photos/videos/diagrams  
-- [ ] Document user testing with non-team members
-- [ ] Add reflection on learnings
-- [ ] List team names at top
-
-**Your README = story of what YOU built!**
-
----
-
-Resources: [MQTT Guide](https://www.hivemq.com/mqtt-essentials/) | [Paho Python](https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php) | [Flask-SocketIO](https://flask-socketio.readthedocs.io/)
+- MIT Tangible Media Group, [TeleAbsence](https://tangible.media.mit.edu/project/teleabsence/). The project we started from. Someone far away can still feel that you are there, through a gesture.
+- MIT HCI Engineering, [Xstrings](https://hcie.csail.mit.edu/research/xstrings/xstrings.html). We used this for the string path in the printed fingers. One string runs through the joints, and pulling it closes the finger.
+- Gyrobot, [Flexy Hand](https://youtu.be/Z70YWNuOB8E?si=lgnRUYCbhTde_MYc). The printed hand we built the fingers and palm from.
