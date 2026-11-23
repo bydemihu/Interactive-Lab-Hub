@@ -1,0 +1,9 @@
+adafruit-blinka
+adafruit-circuitpython-amg88xx
+matplotlib
+adafruit-circuitpython-rgb-display
+numpy
+Pillow
+gpiozero>=2.0.1.post3
+lgpio
+sparkfun-pi-servo-hat
